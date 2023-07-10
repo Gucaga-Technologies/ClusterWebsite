@@ -1,5 +1,270 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+
+    <!-- External CSS -->
+    <link href="style.css" rel="stylesheet">
+
+
+    <title>Association of Five Companies</title>
+</head>
 <body>
-	<h1>Cluster Website</h1>
+    <nav class="navbar navbar-expand-lg navbar-light light-blue py-2 px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="photos/logo_with_title.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#goal">Our Goal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="companies.html">Our Companies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="hero position-relative d-flex align-items-center justify-content-end">
+        <div class="hero-image position-absolute w-100 h-100" style="background: url('photos/hero17.jpg') center center / cover no-repeat;"></div>
+        <div class="overlay position-absolute w-100 h-100" style="background: radial-gradient(ellipse at center, rgba(255,255,255,0) 20%, rgba(255,255,255,0.7) 90%);"></div>
+        <div class="container text-dark position-relative">
+            <div class="hero-text p-3 custom-margin " style="max-width: 50%;">
+                <h2>Revolutionizing the Pharma Industry Together</h2>
+                <a href="#product" class="btn btn-dark scroll-to">Learn More</a> <!-- Add this line -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Main Product Section -->
+    <section id="product" class="container my-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2>Main Product</h2>
+                        <hr>
+                        <p class="lead">We are a consortium of forward-thinking companies, each specializing in specific areas of the Pharma and Medical industry. Together, we offer a comprehensive suite of solutions that cater to diverse needs and challenges.</p>
+                        <a href="contact_us.html" class="cta">Ask for presentation</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="photos/product_image.png" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Strength and Target Market section -->
+    <section id="strengths" class="container my-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="photos/strengths_image.png" alt="Strengths Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Our Strengths</h2>
+                        <hr>
+                        <p class="lead">Our solution stands out for its efficiency, reliability and innovation. We offer top-tier customer service, tailored solutions, and unbeatable scalability. </p>
+                        <a href="companies.html" class="cta">Explore our network</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="market" class="container my-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2>Target Market</h2>
+                        <hr>
+                        <p class="lead">Our primary market focus is the Pharma and Medical industry. Our solution has been designed to cater to the specific needs and challenges of these companies.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex flex-wrap justify-content-around">
+                            <div class="p-2">
+                                <i class="fas fa-pills fa-3x"></i>
+                                <p>Pharmaceutical Companies</p>
+                            </div>
+                            <div class="p-2">
+                                <i class="fas fa-clinic-medical fa-3x"></i>
+                                <p>Pharmacy Networks</p>
+                            </div>
+                            <div class="p-2">
+                                <i class="fas fa-store fa-3x"></i>
+                                <p>Retail</p>
+                            </div>
+                            <div class="p-2">
+                                <i class="fas fa-warehouse fa-3x"></i>
+                                <p>Logistics Centers</p>
+                            </div>
+                            <div class="p-2">
+                                <i class="fas fa-shopping-cart fa-3x"></i>
+                                <p>E-commerce Platforms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="key-metrics" class="container my-5 spacer">
+        <div class="row text-center">
+            <!-- Employee count -->
+            <div class="col-md-4">
+                <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+                <h2><span class="counter">100</span>+</h2>
+                <p>Employees</p>
+            </div>
+            <!-- Projects done -->
+            <div class="col-md-4">
+                <i class="fas fa-tasks fa-3x mb-3 text-primary"></i>
+                <h2><span class="counter">300</span>+</h2>
+                <p>Projects Completed</p>
+            </div>
+            <!-- Revenue -->
+            <div class="col-md-4">
+                <i class="fas fa-euro-sign fa-3x mb-3 text-primary"></i>
+                <h2><span class="counter">20</span>M+</h2>
+                <p>Revenue</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="logos">
+        <!-- Place your logos here -->
+        <img src="photos/logo1.png" alt="Pharma MS">
+        <img src="photos/logo2.png" alt="Inherent Simplicity Baltic">
+        <img src="photos/logo6.png" alt="Equinox Europe">
+        <img src="photos/logo3.png" alt="Singleton Labs">
+        <img src="photos/logo4.png" alt="Optas">
+        <img src="photos/logo5.png" alt="ES4B">
+    </div>
+
+    <footer class="footer light-blue text-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 justify-content-center  align-items-center">
+                    <img src="logo_with_title.png"  alt="Association Logo" id="footer-logo" style="width:320px;">
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Coordinator: Seržas Gucaga</p>
+                    <p>+37068680441</p>
+                    <p>serzas.gucaga@pharmams.com</p>
+                    <p>
+                        K. Petrausko 26-323,
+                        Kaunas, Lithuania
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-rights">
+            <p>© 2023 Pharma IT Cluster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.counter').countTo();
+        });
+    </script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a.scroll-to").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Get the height of the navbar
+                    var navbarHeight = $(".navbar").height();
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    // Subtract the navbar's height from the scroll
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - navbarHeight
+                    }, 800, function () {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 80) {
+                    $('.navbar').css({
+                        'background-color': 'rgba(228, 241, 245, 0.8)', /* slightly transparent */
+                        'transition': 'background-color 0.5s ease' /* smooth color transition */
+                    });
+                } else {
+                    $('.navbar').css({
+                        'background-color': 'rgb(228, 241, 245)', /* fully opaque */
+                        'transition': 'background-color 0.5s ease' /* smooth color transition */
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

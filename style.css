@@ -1,0 +1,321 @@
+<style >
+:root {
+    --primary-color: #0D6EFD;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+/* custom styles for logos and call to action */
+.logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 5px solid #0D6EFD;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 90%;
+}
+
+    .logos img {
+        max-height: 60px; /* Reduce max height to make logos smaller */
+        margin: 10px;
+    }
+
+.cta {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .cta:hover {
+        background-color: #2A56C6;
+    }
+
+/* add this class for additional space between sections */
+.spacer {
+    margin-bottom: 100px;
+}
+
+.section-header {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-text {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #e8f3f6;
+    padding: 20px 0;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1); /* Add shadow for 3D effect */
+    transition: background-color 0.5s; /* Smooth transition for color changes */
+}
+
+.navbar-brand {
+    margin-left: 10%;
+}
+
+    .navbar-brand img {
+        max-height: 80%;
+        width: auto;
+        transition: transform 0.5s; /* Smooth transition for size changes */
+    }
+
+.navbar-nav {
+    margin-right: 20%; /* Adjust as needed */
+}
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: color 0.2s ease-in-out;
+    }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+#navbarLogo {
+    height: 80px;
+    // reduced from 70px width: auto;
+}
+
+@media (max-width: 992px) {
+    #navbarLogo {
+        height: 40px;
+        // reduced from 50px
+    }
+}
+
+@media (max-width: 768px) {
+    #navbarLogo {
+        max-height: 40%; /* Adjust this value for smaller viewports */
+    }
+}
+
+.hero {
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+    height: 37vw;
+    overflow: hidden; /* This ensures that the image doesn't overflow the hero section. */
+    margin-top: -40px; /* Adjust this value to reduce the white space */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image cover the full area of its container. */
+    object-position: center; /* This centers the image within its container. */
+}
+
+.hero-text {
+    max-width: 60%; /* adjust as needed */
+    text-align: left; /* or right, depending on your needs */
+    position: relative;
+    left: 5%; /* adjust as needed */
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        max-width: 80%; /* adjust as needed */
+        font-size: 0.8em; /* adjust as needed */
+        left: 0; /* adjust as needed */
+    }
+}
+@media (max-width: 480px) {
+    .hero-text {
+        max-width: 80%; /* adjust as needed */
+        font-size: 0.6em; /* adjust as needed */
+      
+    }
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0) 20%, rgba(255,255,255,0.7) 90%);
+}
+
+.custom-margin {
+    margin-left: 67%; /* adjust this value as needed */
+}
+
+.footer {
+    padding: 20px 0;
+    margin-top: auto;
+    /*position: fixed;
+    bottom: 0;
+    width: 100%;*/
+}
+
+.company-box {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-height: 800px;
+}
+
+.light-blue {
+    background-color: #e8f3f6;
+}
+
+.footer-rights {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+
+h2.h4 {
+    font-size: 2.5rem;
+}
+
+.icon-hover:hover {
+    transform: scale(1.1);
+}
+
+
+
+#strengths-target {
+    background-image: url('bg-pattern.png');
+    background-size: cover;
+}
+
+#key-metrics {
+    background-color: #e8f3f6;
+    padding-top: 10px; /* Adjust as needed */
+}
+
+.logos-container {
+    background-color: #ffffff;
+}
+
+.main-content {
+    margin-top: 20px; /* Adjust this value according to the height of your navigation bar */
+}
+
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-footer {
+    background-color: transparent;
+}
+
+
+
+.logo {
+    min-height: 190px;
+    max-width: 100%;
+    max-height: 190px;
+    width: auto;
+    height: auto;
+}
+
+.coordinator-card {
+    width: 80%; /* adjust as per your requirement */
+    margin: auto; /* centers the card */
+}
+
+.coordinator-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.card-img-top {
+    width: 100%; /* adjust as per your requirement */
+    margin: auto; /* centers the image */
+}
+
+
+.intro-container {
+    background: linear-gradient(135deg, #f5f7fa, #e0e7f3); /* A gradient background */
+    padding: 60px 30px; /* Padding around the text */
+    text-align: center; /* Center the text */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
+    max-width: 90%; /* Make the container responsive */
+    margin: auto; /* Center the container */
+}
+
+.intro-header {
+    font-size: 2.5em; /* Increase the font size */
+    color: #2c3e50; /* Dark blue color */
+    margin-bottom: 20px; /* Some space between the header and the text */
+    animation: fadeInDown 2s ease; /* Add a fading animation */
+}
+
+.intro-text {
+    color: #2c3e50; /* Dark blue color */
+    line-height: 1.6; /* Increase the line height for better readability */
+    animation: fadeInUp 2s ease; /* Add a fading animation */
+}
+
+
+/* Animations */
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style >
