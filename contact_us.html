@@ -134,6 +134,7 @@
                                         <input type="hidden" name="contact_number" id="contact_number"> <!-- Hidden field for contact_number -->
                                         <button type="submit" class="btn btn-primary my-submit-btn">Submit</button>
                                     </form>
+                                    <div id="message-status" style="display: none;"></div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card bg-light mb-4 coordinator-card" data-aos="fade-up">
@@ -170,8 +171,12 @@
                 <div class="col-md-4">
                     <h5>Contact Us</h5>
                     <p>Coordinator: Seržas Gucaga</p>
-                    <p>Phone: 123-456-7890</p>
-                    <p>Email: serzas.gucaga@pharmams.com</p>
+                    <p>+37068680441</p>
+                    <p>serzas.gucaga@pharmams.com</p>
+                    <p>
+                        K. Petrausko 26-323,
+                        Kaunas, Lithuania
+                    </p>
                 </div>
             </div>
             <hr>
@@ -220,14 +225,19 @@
         window.onload = function () {
             document.getElementById('myForm').addEventListener('submit', function (event) {
                 event.preventDefault();
-                // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('service_n3j30ef', 'template_145dxvy', this) // replace with your service ID and template ID
+
+                emailjs.sendForm('service_n3j30ef', 'template_145dxvy', this)
                     .then(function () {
                         console.log('SUCCESS!');
+                        document.getElementById('message-status').style.display = 'block';
+                        document.getElementById('message-status').innerText = 'Your message has been sent successfully!';
+                        document.getElementById('message-status').style.color = 'green';
                     }, function (error) {
                         console.log('FAILED...', error);
+                        document.getElementById('message-status').style.display = 'block';
+                        document.getElementById('message-status').innerText = 'An error occurred. Please try again later.';
+                        document.getElementById('message-status').style.color = 'red';
                     });
             });
         }
