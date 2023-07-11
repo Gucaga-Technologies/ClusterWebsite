@@ -122,7 +122,7 @@ body {
 
 @media (max-width: 768px) {
     #navbarLogo {
-        max-height: 70%; /* Adjust this value for smaller viewports */
+        max-height: 90%; /* Adjust this value for smaller viewports */
     }
 }
 
