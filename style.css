@@ -122,7 +122,7 @@ body {
 
 @media (max-width: 768px) {
     #navbarLogo {
-        max-height: 40%; /* Adjust this value for smaller viewports */
+        max-height: 60%; /* Adjust this value for smaller viewports */
     }
 }
 
@@ -166,7 +166,7 @@ body {
 
 @media (max-width: 480px) {
     .hero .hero-text h2 {
-        font-size: 16px !important;
+        font-size: 20px !important;
         word-break: break-word;
     }
 }
@@ -175,12 +175,12 @@ body {
 }
 @media (max-width: 768px) {
     .custom-margin {
-        margin-left: 55%; /* adjust as needed */
+        margin-left: 58%; /* adjust as needed */
     }
 }
 @media (max-width: 480px) {
     .custom-margin {
-        margin-left: 45%; /* adjust as needed */
+        margin-left: 53%; /* adjust as needed */
     }
 }
 
