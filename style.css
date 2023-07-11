@@ -130,6 +130,7 @@ body {
     position: relative;
     height: 70vh;
     width: 100vw;
+    left: -10px;
     height: 37vw;
     overflow: hidden; /* This ensures that the image doesn't overflow the hero section. */
     margin-top: -40px; /* Adjust this value to reduce the white space */
