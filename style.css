@@ -45,6 +45,15 @@ body {
         background-color: #2A56C6;
     }
 
+.parent-div {
+    padding-bottom: 15px; /* adjust as needed */
+}
+@media (min-width: 992px) {
+    .parent-div {
+        padding-bottom: 0; /* adjust as needed */
+    }
+}
+
 /* add this class for additional space between sections */
 .spacer {
     margin-bottom: 100px;
@@ -139,19 +148,39 @@ body {
     position: relative;
     left: 5%; /* adjust as needed */
 }
-
 @media (max-width: 768px) {
-    .hero-text {
-        max-width: 80%; /* adjust as needed */
-        font-size: 0.8em; /* adjust as needed */
-        left: 0; /* adjust as needed */
+    .hero {
+        height: 35vh; /* change this as per your requirement */
+    }
+}
+.cta-product {
+    margin-bottom: 30px; /* adjust as needed */
+}
+@media (max-width: 768px) {
+    .hero .hero-text h2 {
+        font-size: 20px !important;
+        word-break: break-word;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .hero .hero-text h2 {
+        font-size: 16px !important;
+        word-break: break-word;
+    }
+}
+.custom-margin {
+    margin-left: 67%; /* adjust this value as needed */
+}
+@media (max-width: 768px) {
+    .custom-margin {
+        margin-left: 55%; /* adjust as needed */
     }
 }
 @media (max-width: 480px) {
-    .hero-text {
-        max-width: 80%; /* adjust as needed */
-        font-size: 0.6em; /* adjust as needed */
-      
+    .custom-margin {
+        margin-left: 45%; /* adjust as needed */
     }
 }
 
@@ -162,9 +191,7 @@ body {
     background: radial-gradient(ellipse at center, rgba(255,255,255,0) 20%, rgba(255,255,255,0.7) 90%);
 }
 
-.custom-margin {
-    margin-left: 67%; /* adjust this value as needed */
-}
+
 
 .footer {
     padding: 20px 0;
@@ -266,6 +293,11 @@ h2.h4 {
     width: 100%; /* adjust as per your requirement */
     margin: auto; /* centers the image */
 }
+
+.my-submit-btn {
+    margin-bottom: 20px;
+}
+
 
 
 .intro-container {
