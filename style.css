@@ -350,4 +350,94 @@ h2.h4 {
     }
 }
 
+@keyframes gradientShift {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+/* Mission Section Styles */
+.missions-section {
+    background: linear-gradient(120deg, #c8d8ff 0%, #e3f7fd 100%);
+    padding: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    animation: gradientShift 5s linear infinite;
+}
+
+.section-header {
+    color: #333333; /* Color for the "Our Missions" title */
+}
+
+
+.rounded-box {
+    border-radius: 15px; /* Rounded corners */
+    background-color: #ffffff; /* Background color of the box */
+    margin: 0 auto; /* Centering the box */
+    max-width: 80%; /* Making it shorter */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow */
+}
+
+.carousel-inner {
+    padding: 20px; /* Padding inside the carousel box */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    top: 80%; /* Move buttons down */
+    transform: translateY(-50%);
+}
+.flag-icon {
+    width: 25px; /* Or whatever size you prefer */
+    line-height: 25px; /* Match line height to width for square flag */
+}
+
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 5; /* This will ensure the button appears above other elements */
+}
+
+.event-detail {
+    padding: 40px 0;
+}
+
+    .event-detail img {
+        border-radius: 10px; /* Slightly rounded corners for the image */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+
+    .event-detail h2 {
+        color: #333333; /* Dark grey color for the title */
+        font-weight: 500; /* Semi-bold font weight */
+        margin-bottom: 20px;
+    }
+
+    .event-detail p {
+        color: #555555; /* Grey color for the text */
+        line-height: 1.5; /* Spacing between lines */
+        font-size: 16px; /* Font size */
+    }
+
+.event-card {
+    margin: 2px 0; /* Adjust the top and bottom margins as needed */
+}
+
 </style >
