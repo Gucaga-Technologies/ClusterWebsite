@@ -440,4 +440,100 @@ h2.h4 {
     margin: 2px 0; /* Adjust the top and bottom margins as needed */
 }
 
+
+/* Style for the main image */
+.main-image {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px; /* Spacing between main image and thumbnails */
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap; /* Allows thumbnails to wrap to the next line */
+}
+
+/* Thumbnails styling */
+.thumbnail {
+    width: 170px; /* Adjust based on desired thumbnail size */
+    max-height:120px;
+    height: auto;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    padding-top: 150px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Black with a bit of transparency */
+     overflow: visible !important; /* Ensure that child elements aren't being clipped */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+    .close:hover, .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-content {
+    position: relative; /* Makes sure the buttons are positioned relative to the image */
+}
+
+.modal-prev, .modal-next {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    color: #333; /* Dark gray for the arrows */
+    border-radius: 50%; /* Makes the buttons circular */
+    width: 40px; /* Width of the buttons */
+    height: 40px; /* Height of the buttons */
+    text-align: center; /* Centers the arrows horizontally */
+    line-height: 40px; /* Centers the arrows vertically */
+    font-size: 24px; /* Adjust the size of the arrows */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for button height */
+}
+
+    .modal-prev:hover, .modal-next:hover {
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent white on hover */
+    }
+
+.modal-prev {
+    left: 35px; /* Positioning to the left */
+}
+
+.modal-next {
+    right: 35px; /* Positioning to the right */
+}
+
+.close {
+    position: absolute; /* Position relative to modal */
+    top: 150px; /* Distance from the top edge */
+    right: 50px; /* Distance from the right edge */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    color: #333; /* Dark gray for the 'X' symbol */
+    border-radius: 50%; /* Makes the button circular */
+    width: 30px; /* Width of the button */
+    height: 30px; /* Height of the button */
+    text-align: center; /* Centers the 'X' horizontally */
+    line-height: 30px; /* Centers the 'X' vertically */
+    font-size: 20px; /* Adjust the size of the 'X' */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Hand cursor for better UX */
+}
 </style >

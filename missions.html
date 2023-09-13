@@ -63,17 +63,39 @@
         <div class="card event-card">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center pl-3">
-                    <img src="photos/IMG_MonLt.jpg" alt="Event Image" class="img-fluid card-img mx-auto d-block">
+                    <div class="image-section">
+                        <!-- New wrapper div -->
+                        <!-- Main large image -->
+                        <img src="photos/IMG_MonLT.jpg" alt="Main Image" class="main-image">
+
+                        <!-- Thumbnails -->
+                        <div class="thumbnails">
+                            <img src="photos/MongoliaVilniuje.jpg" alt="Thumbnail 1" class="thumbnail">
+                            <img src="photos/MongoliaTrakai.jpg" alt="Thumbnail 3" class="thumbnail">
+                            <img src="photos/MongoliaGintarine.jpg" alt="Thumbnail 2" class="thumbnail">
+                            <img src="photos/MongoliaCamelia.jpg" alt="Thumbnail 4" class="thumbnail">
+
+                        </div>
+                    </div>
+
+                    <!-- Modal for viewing larger images -->
+                    <div class="modal" id="myModal">
+                        <span class="close">&times;</span>
+                        <a class="modal-prev">&#10094;</a>
+                        <a class="modal-next">&#10095;</a>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
                 </div>
                 <div class="col-md-6 card-body">
-                    <h3>Visit from Mongolia to Lithuania</h3>
-                    <h6>August 17-22, 2023</h6>
+                    <h3>2 Visits from Mongolia to Lithuania</h3>
+                    <h6>August 17-22, Augustas 26-30, 2023</h6>
                     <h5>Activities and Objectives:</h5>
                     <p>The primary goal was for the Monos Group to understand the solutions that Cluster members have implemented in Lithuania. Key activities during the visit included:</p>
                     <ul>
                         <li>Meetings with representatives from "Pharmams" and "Inherent Simplicity Baltic".</li>
-                        <li>Inspection of the warehouse and inventory management systems at Camelia.</li>
-                        <li>Meeting with representatives from "Equinox".</li>
+                        <li>Inspection of the warehouse and inventory management systems at Lithuanian pharmacy chains.</li>
+                        <li>Meeting with representatives from "Equinox" and "Optas".</li>
                         <li>A demonstration of the Singleton lockers.</li>
                     </ul>
                     <h5>Benefits:</h5>
@@ -257,7 +279,52 @@
             });
         });
     </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
+        // Get the image and insert it inside the modal
+        var img = document.querySelectorAll('.thumbnail');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var currentThumbnailIndex = 0; // To keep track of which thumbnail is currently displayed in the modal
+
+        for (let i = 0; i < img.length; i++) {
+            img[i].onclick = function (event) {
+                event.stopPropagation();  // Stop the event from bubbling up
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+                currentThumbnailIndex = i;  // Set the current index
+            }
+        }
+
+        // Add event listeners for the next and prev buttons
+        document.querySelector('.modal-next').addEventListener('click', function () {
+            if (currentThumbnailIndex < img.length - 1) {
+                currentThumbnailIndex++;
+                modalImg.src = img[currentThumbnailIndex].src;
+                captionText.innerHTML = img[currentThumbnailIndex].alt;
+            }
+        });
+
+        document.querySelector('.modal-prev').addEventListener('click', function () {
+            if (currentThumbnailIndex > 0) {
+                currentThumbnailIndex--;
+                modalImg.src = img[currentThumbnailIndex].src;
+                captionText.innerHTML = img[currentThumbnailIndex].alt;
+            }
+        });
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        modal.onclick = function (event) {
+            if (event.target === modal || event.target === modalImg) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
