@@ -467,7 +467,7 @@ h2.h4 {
     display: none; /* Hidden by default */
     position: fixed;
     z-index: 1;
-    padding-top: 150px;
+    padding-top: 250px;
     left: 0;
     top: 0;
     width: 100%;
