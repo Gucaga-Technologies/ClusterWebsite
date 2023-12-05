@@ -455,7 +455,7 @@ h2.h4 {
 
 /* Thumbnails styling */
 .thumbnail {
-    width: 170px; /* Adjust based on desired thumbnail size */
+    width: 250px; /* Adjust based on desired thumbnail size */
     max-height:120px;
     height: auto;
     margin: 5px;
@@ -481,7 +481,7 @@ h2.h4 {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 900px;
 }
 
     .close:hover, .close:focus {
