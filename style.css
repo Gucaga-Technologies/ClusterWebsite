@@ -1,539 +1,2112 @@
-<style >
-:root {
-    --primary-color: #0D6EFD;
-    --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
+/*__________________Default______________________________________________________________________________*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-top: 100px;
+    background-color: #fff; /* White background for minimalism */
+    color: #212529; /* Bootstrap's default for maximum readability */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* System fonts for a clean look */
 }
 
-/* custom styles for logos and call to action */
-.logos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    border: 5px solid #0D6EFD;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 50px auto;
-    max-width: 90%;
-}
-
-    .logos img {
-        max-height: 60px; /* Reduce max height to make logos smaller */
-        margin: 10px;
-    }
-
-.cta {
-    margin-top: 30px;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-    .cta:hover {
-        background-color: #2A56C6;
-    }
-
-.parent-div {
-    padding-bottom: 15px; /* adjust as needed */
-}
-@media (min-width: 992px) {
-    .parent-div {
-        padding-bottom: 0; /* adjust as needed */
-    }
-}
-
-/* add this class for additional space between sections */
-.spacer {
-    margin-bottom: 100px;
-}
-
-.section-header {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-.section-text {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-}
-
-
+/*__________________NAV BAR______________________________________________________________________________*/
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #e8f3f6;
-    padding: 20px 0;
-    box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1); /* Add shadow for 3D effect */
-    transition: background-color 0.5s; /* Smooth transition for color changes */
+    padding: 0.5rem 1rem; /* Reduced padding */
+    background-color: #fff !important; /* Set background to white */
+    display: flex;
+    align-items: center; /* This ensures vertical alignment */
+    justify-content: space-between; /* This spreads out the logo and the nav items */
+
 }
 
-.navbar-brand {
-    margin-left: 10%;
+#navbarLogo {
+    max-height: 120px; /* Adjust as needed */
+    width: auto;
+    /* If your logo has additional whitespace, you can adjust its vertical position with margin */
+    margin-top: -25px; /* Adjust as needed */
 }
-
-    .navbar-brand img {
-        max-height: 80%;
-        width: auto;
-        transition: transform 0.5s; /* Smooth transition for size changes */
-    }
 
 .navbar-nav {
-    margin-right: 20%; /* Adjust as needed */
+    display: flex;
+    align-items: center; /* Align the nav items vertically */
 }
 
     .navbar-nav .nav-link {
-        font-size: 1.2rem;
-        font-weight: 500;
-        letter-spacing: 1px;
-        transition: color 0.2s ease-in-out;
+        margin-left: 2rem; /* Space out the nav items */
+        color: #555; /* Your text color */
+        transition: color 0.3s ease;
     }
 
-        .navbar-nav .nav-link:hover {
-            color: var(--primary-color);
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link:focus {
+            color: #0056b3; /* Hover color */
         }
 
-#navbarLogo {
-    height: 80px;
-    // reduced from 70px width: auto;
-}
-
-@media (max-width: 992px) {
-    #navbarLogo {
-        height: 40px;
-        // reduced from 50px
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 0.5rem;
     }
-}
 
-@media (max-width: 768px) {
-    #navbarLogo {
-        max-height: 90%; /* Adjust this value for smaller viewports */
-    }
-}
+        .navbar-nav .nav-link {
+            margin-left: 0; /* Stack the nav items vertically in the collapsed menu */
+        }
 
-.hero {
-    position: relative;
-    height: 70vh;
-    width: 100vw;
-    height: 37vw;
-    overflow: hidden; /* This ensures that the image doesn't overflow the hero section. */
-    margin-top: -40px; /* Adjust this value to reduce the white space */
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This makes the image cover the full area of its container. */
-    object-position: center; /* This centers the image within its container. */
-}
-
-.hero-text {
-    max-width: 60%; /* adjust as needed */
-    text-align: left; /* or right, depending on your needs */
-    position: relative;
-    left: 5%; /* adjust as needed */
-}
-@media (max-width: 768px) {
-    .hero {
-        height: 35vh; /* change this as per your requirement */
-    }
-}
-.cta-product {
-    margin-bottom: 30px; /* adjust as needed */
-}
-@media (max-width: 768px) {
-    .hero .hero-text h2 {
-        font-size: 22px !important;
-        word-break: break-word;
+    .navbar-toggler {
+        align-self: center; /* Center the toggler icon */
     }
 }
 
 
-@media (max-width: 480px) {
-    .hero .hero-text h2 {
-        font-size: 18px !important;
-        word-break: break-word;
-    }
-}
-.custom-margin {
-    margin-left: 67%; /* adjust this value as needed */
-}
-@media (max-width: 768px) {
-    .custom-margin {
-        margin-left: 60%; /* adjust as needed */
-    }
-}
-@media (max-width: 480px) {
-    .custom-margin {
-        margin-left: 56%; /* adjust as needed */
-    }
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,0) 20%, rgba(255,255,255,0.7) 90%);
-}
 
 
 
-.footer {
-    padding: 20px 0;
-    margin-top: auto;
-    /*position: fixed;
-    bottom: 0;
-    width: 100%;*/
-}
 
-.company-box {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-height: 800px;
-}
 
-.light-blue {
-    background-color: #e8f3f6;
-}
+/*__________________Banners______________________________________________________________________________*/
 
-.footer-rights {
+/* Base styles for all banners */
+.banner-landing {
+    background: no-repeat center center/cover;
+    /* Other common styles (padding, dimensions, etc.) */
+    height: 230px; /* Example height, adjust as needed */
+    position: relative; /* Establishes a positioning context for absolute positioning */
+}
+/* General text styling */
+.banner-text {
+    position: absolute; /* Absolute positioning inside the banner */
     text-align: center;
-    padding-top: 5px;
+    width: 100%; /* Ensures the text container spans the width of the banner */
+    color: #ffffff; /* Example text color, adjust as needed */
 }
 
-.lead {
-    font-size: 1.5rem;
+/* Unique styles for specific banners */
+.cluster-solution-banner {
+    background-image: url('photos/header127.png');
 }
 
-h2.h4 {
+.members-banner {
+    background-image: url('photos/header124.png');
+}
+
+.partners-banner {
+    background-image: url('photos/header123.png');
+}
+
+.events-banner {
+    background-image: url('photos/header126.png');
+}
+.about-banner {
+    background-image: url('photos/header125.png');
+}
+
+.contact-banner {
+    background-image: url('photos/header128.png');
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner-landing {
+        height: 130px; /* Shorter height for smaller screens */
+
+    }
+    .cluster-solution-banner, .members-banner, .partners-banner {
+        background-position: top center;
+    }
+
+    /* You can also add specific responsive adjustments for each unique banner if needed */
+}
+
+
+/*__________________Body______________________________________________________________________________*/
+/* Include Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+.body-section {
+    background-color: #f8f9fa;
+    font-family: 'Open Sans', sans-serif;
+}
+/*__________________Home page______________________________________________________________________________*/
+/*__________________Home page______________________________________________________________________________*/
+/*__________________Home page______________________________________________________________________________*/
+
+/* Hero Section styles */
+.home-page-header {
+    background: url('photos/home4.png') no-repeat center center/cover;
+    height: 60vh; /*Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.home-page-hero-content h1 {
     font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.icon-hover:hover {
-    transform: scale(1.1);
+.home-page-hero-content p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
 }
 
-
-
-#strengths-target {
-    background-image: url('bg-pattern.png');
-    background-size: cover;
+.home-page-hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
-#key-metrics {
-    background-color: #e8f3f6;
-    padding-top: 10px; /* Adjust as needed */
-}
-
-.logos-container {
-    background-color: #ffffff;
-}
-
-.main-content {
-    margin-top: 20px; /* Adjust this value according to the height of your navigation bar */
-}
-
-
-.card {
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+.home-page-cta-button {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: #0056b3; /* PharmaIT Cluster's blue */
+    color: white;
     border-radius: 5px;
-    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
 }
 
-    .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    .home-page-cta-button:hover {
+        background-color: #003d82; /* Darker blue on hover */
     }
 
-.card-body {
-    padding: 1.5rem;
-    text-align: center;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-page-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-page-hero-content p {
+        font-size: 1rem;
+    }
+
+    .home-page-cta-button {
+        padding: 0.75rem 1.5rem;
+    }
 }
 
-.card-footer {
-    background-color: transparent;
+@media (max-width: 480px) {
+    .home-page-header {
+        height: auto; /* Adjust height on very small screens */
+        padding: 2rem 0; /* Add padding */
+    }
+
+    .home-page-hero-ctas {
+        flex-direction: column;
+    }
+
+    .home-page-cta-button {
+        width: 80%;
+        margin: 0 auto; /* Center buttons */
+        margin-bottom: 1rem; /* Space between buttons */
+    }
 }
 
 
 
-.logo {
-    min-height: 190px;
-    max-width: 100%;
-    max-height: 190px;
-    width: auto;
-    height: auto;
+/* Home Page About Section Styles */
+.home-page-about {
+    background-color: #ffffff; /* Use a plain background */
+    padding: 40px 0;
+    color: #333; /* Primary text color */
 }
 
-.coordinator-card {
-    width: 80%; /* adjust as per your requirement */
-    margin: auto; /* centers the card */
+.home-page-about-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center text for a balanced look */
 }
 
-.coordinator-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-.card-img-top {
-    width: 100%; /* adjust as per your requirement */
-    margin: auto; /* centers the image */
-}
-
-.my-submit-btn {
+.home-page-about-title {
+    font-size: 2.5em;
+    color: #0d47a1; /* Cluster's theme color for the title */
     margin-bottom: 20px;
 }
 
-
-
-.intro-container {
-    background: linear-gradient(135deg, #f5f7fa, #e0e7f3); /* A gradient background */
-    padding: 60px 30px; /* Padding around the text */
-    text-align: center; /* Center the text */
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
-    max-width: 90%; /* Make the container responsive */
-    margin: auto; /* Center the container */
+.home-page-about-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.intro-header {
-    font-size: 2.5em; /* Increase the font size */
-    color: #2c3e50; /* Dark blue color */
-    margin-bottom: 20px; /* Some space between the header and the text */
-    animation: fadeInDown 2s ease; /* Add a fading animation */
-}
-
-.intro-text {
-    color: #2c3e50; /* Dark blue color */
-    line-height: 1.6; /* Increase the line height for better readability */
-    animation: fadeInUp 2s ease; /* Add a fading animation */
-}
-
-
-/* Animations */
-
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: 100px 100px;
-    }
-}
-
-/* Mission Section Styles */
-.missions-section {
-    background: linear-gradient(120deg, #c8d8ff 0%, #e3f7fd 100%);
-    padding: 40px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    animation: gradientShift 5s linear infinite;
-}
-
-.section-header {
-    color: #333333; /* Color for the "Our Missions" title */
-}
-
-
-.rounded-box {
-    border-radius: 15px; /* Rounded corners */
-    background-color: #ffffff; /* Background color of the box */
-    margin: 0 auto; /* Centering the box */
-    max-width: 80%; /* Making it shorter */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow */
-}
-
-.carousel-inner {
-    padding: 20px; /* Padding inside the carousel box */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-    top: 80%; /* Move buttons down */
-    transform: translateY(-50%);
-}
-.flag-icon {
-    width: 25px; /* Or whatever size you prefer */
-    line-height: 25px; /* Match line height to width for square flag */
-}
-
-.learn-more-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    z-index: 5; /* This will ensure the button appears above other elements */
-}
-
-.event-detail {
-    padding: 40px 0;
-}
-
-    .event-detail img {
-        border-radius: 10px; /* Slightly rounded corners for the image */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    }
-
-    .event-detail h2 {
-        color: #333333; /* Dark grey color for the title */
-        font-weight: 500; /* Semi-bold font weight */
-        margin-bottom: 20px;
-    }
-
-    .event-detail p {
-        color: #555555; /* Grey color for the text */
-        line-height: 1.5; /* Spacing between lines */
-        font-size: 16px; /* Font size */
-    }
-
-.event-card {
-    margin: 2px 0; /* Adjust the top and bottom margins as needed */
-}
-
-
-/* Style for the main image */
-.main-image {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px; /* Spacing between main image and thumbnails */
-}
-
-.thumbnails {
+.home-page-about-icons {
     display: flex;
-    flex-wrap: wrap; /* Allows thumbnails to wrap to the next line */
+    justify-content: center; /* Center icons for a balanced look */
+    align-items: center;
+    margin-bottom: 20px; /* Space between icons and text */
 }
 
-/* Thumbnails styling */
-.thumbnail {
-    width: 250px; /* Adjust based on desired thumbnail size */
-    max-height:120px;
+.home-page-icon-container {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px; /* Space between icon and its label */
+}
+
+.home-page-icon {
+    width: 80px; /* Adjust icon size */
     height: auto;
-    margin: 5px;
+    margin-right: 10px;
+}
+
+.home-page-btn-primary {
+    background-color: #0056b3; /* Button color */
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+    .home-page-btn-primary:hover {
+        background-color: #003d82; 
+    }
+
+
+.home-page-target-market {
+
+    padding: 20px 0;
+}
+
+.home-page-target-market-title {
+    text-align: center;
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.target-market-icons .target-market-icon-container {
+    text-align: center;
+    color: #0d47a1; /* Blueish text for icons and paragraphs */
+}
+
+    .target-market-icons .target-market-icon-container i {
+        color: #0d47a1; /* Blueish color for icons */
+        margin-bottom: 10px;
+    }
+
+.target-market-icons p {
+    font-size: 0.9rem; /* Smaller text size for descriptions */
+}
+
+
+
+
+.home-page-synergy-system {
+    background-color: #f8f9fa; /* A slightly different shade of light blue for differentiation */
+    padding: 30px 0;
+    border-top: 1px solid #d1e0e5; /* A subtle border top for a distinct separation */
+    border-bottom: 1px solid #d1e0e5; /* A subtle border bottom for a distinct separation */
+}
+
+.synergy-system-title {
+    color: #0d47a1;
+    margin-bottom: 15px;
+    font-size: 2rem; /* Larger font size for title */
+}
+
+.synergy-system-description {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.2rem; /* Readable font size for description */
+}
+
+.synergy-system-link {
+    color: #fff;
+    background-color: #0d47a1;
+    padding: 10px 25px;
+    border-radius: 20px; /* Smooth rounded edges for the button */
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s ease;
+}
+
+    .synergy-system-link:hover {
+        background-color: #0b3c78; /* Darker shade on hover for the button */
+        text-decoration: none; /* Ensure no underline on hover */
+    }
+
+
+/* products........................ */
+
+
+.home-page-featured-solutions .home-page-background {
+    background-color: #f8f9fa; /* Very light blue background */
+    padding: 40px 0;
+}
+
+.home-page-featured-solutions .container {
+    text-align: center;
+}
+
+.home-page-section-title {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 1rem;
+}
+
+.home-page-section-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.home-page-main-btn {
+    background-color: #0d47a1; /* Or any other color that matches the theme */
+    border: none;
+    border-radius: 25px; /* Rounded edges for the button */
+    padding: 10px 30px; /* Adjusted padding */
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* To center the text in the button */
+    width: 50%; /* Adjusted width */
+}
+
+    .home-page-main-btn:hover {
+        background-color: #0b3c78; /* Slightly darker shade on hover */
+    }
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -30px; /* Adjust the bottom property as needed */
+    left: 35%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+    .carousel-indicators li {
+        display: inline-block;
+        width: 10px; /* Adjust as needed */
+        height: 10px; /* Adjust as needed */
+        margin: 1px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #0d47a1; /* Or any other color that matches the theme */
+        border-radius: 100%;
+        border: none;
+    }
+
+.home-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.carousel-item {
+    display: none; /* Ensures all carousel items are not displayed by default */
+    justify-content: center;
+    flex-wrap: nowrap; /* Prevents wrapping, all items in a single line */
+}
+
+    .carousel-item.active {
+        display: flex; /* Only the active item will be displayed */
+    }
+
+.home-page-featured-solutions .carousel-item .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+    .home-page-featured-solutions .carousel-item .row > div {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+/* ... other CSS ... */
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Adjusting for medium devices */
+    .home-page-featured-solutions .carousel-item .row > div {
+        max-width: 50%; /* Or 100% / number of items you want per row */
+        flex: 0 0 50%; /* Same as above */
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page-featured-solutions .carousel-item .row > div {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .home-page-main-btn {
+        width: 80%; /* Adjusted width for smaller screens */
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .home-page-section-title {
+        font-size: 2rem;
+    }
+
+    .home-page-section-description {
+        font-size: 1rem;
+    }
+
+    .home-page-main-btn {
+        font-size: 1rem;
+        width: 60%; /* Adjusted width for smaller screens */
+    }
+
+    .carousel-indicators {
+        bottom: -30px; /* Adjusted for smaller screens */
+    }
+}
+
+/*________Sections__________________*/
+.home-page-three-parts {
+    margin: 20px 0;
+    overflow: hidden; /* Ensures the content does not exceed the boundaries */
+    display: flex;
+    justify-content: center;
+}
+
+.home-page-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: #fff; /* White background for the container */
+}
+
+
+
+.home-page-section-card {
+    flex-grow: 1;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures the content respects the border-radius */
+    display: flex;
+    flex-direction: column;
+}
+
+.home-page-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    height: 100%;
+}
+
+.home-page-members {
+    background: linear-gradient(135deg, #6dd5ed 0%, #2196f3 100%);
+}
+
+.home-page-collaboration {
+    background: linear-gradient(135deg, #80d0c7 0%, #009688 100%);
+}
+
+.home-page-partners {
+    background: linear-gradient(135deg, #daacec 0%, #8e44ad 100%);
+}
+
+
+.home-page-section h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.home-page-section p {
+    font-size: 1rem;
+    margin-bottom: 20px; /* Space above the button */
+}
+
+.home-page-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #0d47a1; /* Blue for buttons */
+    padding: 10px 30px;
+    border-radius: 20px; /* Rounded edges for buttons */
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Aligns the button properly */
+    margin-top: 10px;
+}
+
+.home-page-member-btn:hover {
+    background-color: #005b4f; /* Darker teal on hover for member button */
+}
+
+.home-page-partner-btn:hover {
+    background-color: #38006b; /* Darker purple on hover for partner button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .home-page-container {
+        flex-direction: column;
+    }
+
+    .home-page-section {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page-section-title {
+        font-size: 2rem;
+    }
+
+    .home-page-section-description,
+    .home-page-section p {
+        font-size: 1rem;
+    }
+
+    .home-page-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*________Cluster__________________*/
+/*________Solution__________________*/
+/*________Only__________________*/
+
+
+
+/* Landing Section */
+
+
+
+.cluster-solution-overlay {
+    /*   background: rgba(0, 0, 0, 0.7);*/
+    padding: 60px;
+    text-align: center;
+    }
+
+
+.cluster-solution-headline {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.cluster-solution-subheadline {
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.cluster-solution-cta-button {
+    color: #fff;
+    background: #0056b3;
+    padding: 10px 20px;
+    border: none;
     cursor: pointer;
+    margin-top: 2rem;
+}
+
+
+/* Partner Logos Section Style */
+.cluster-solution-partners {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.cluster-solution-partners-logos {
+    /* Your styles for the logo container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cluster-solution-member-logo {
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+    .cluster-solution-member-logo:hover .cluster-solution-partner-logo {
+        transform: scale(1.1); /* Adjust scale value to desired hover size */
+    }
+
+.cluster-solution-partner-logo {
+    /* Set the initial size of your logos here */
+    transition: transform 0.3s ease;
+    max-width: 150px; /* Adjust width as needed to make logos smaller */
+    margin: 10px;
+}
+
+/* Final CTA Section Style */
+.cluster-solution-final-cta {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f9fa;
+}
+
+/* Enhanced Product Overview Section */
+    .cluster-solution-product-overview {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.cluster-solution-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.cluster-solution-section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #004085;
+    margin-bottom: 20px;
+}
+
+.cluster-solution-intro {
+    font-size: 1.1rem;
+    color: #212529;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.cluster-solution-feature-item {
+    padding: 15px;
+    text-align: center;
+}
+
+.cluster-solution-feature-icon {
+    font-size: 2.5rem; /* Adjust the size as you like */
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.cluster-solution-feature-title {
+    font-size: 1.3rem;
+    color: #004085;
+    margin-bottom: 10px;
+}
+
+.cluster-solution-feature-text {
+    font-size: 1rem;
+    color: #212529;
+    margin-bottom: 30px;
+}
+
+.cluster-solution-features-section-title {
+    font-size: 1.8rem;
+    color: #004085;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 15px; /* Aligns with the start of the features */
+}
+
+/* Key Benefits Section */
+.cluster-solution-key-benefits {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.cluster-solution-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+cluster-solution-key-benefits {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.cluster-solution-key-benefits .key-benefits-title {
+    margin-bottom: 20px;
+}
+
+.cluster-solution-key-benefits .key-benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+    .cluster-solution-key-benefits .key-benefits-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+.cluster-solution-key-benefits .key-benefit-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.cluster-solution-key-benefits .key-benefit-title {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .key-benefits-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .benefit-content {
+        text-align: center;
+    }
+
+    .feature-icon {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+.cluster-solution-synergy-quote {
+    font-style: italic;
+    border-left: 4px solid #0056b3; /* A colored line for the quote */
+    padding-left: 20px;
+    margin: 30px 0;
+}
+
+    .cluster-solution-synergy-quote footer {
+        text-align: right;
+        font-weight: bold;
+    }
+
+
+
+/*__________________Members_________________*/
+.cluster-members {
+    background-image: url('photos/members.png'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.member-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    background-color: #ffffff; /* Original white color */
+    border: none;
+    border-radius: 10px; /* Soft rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 1rem;
+    text-align: center;
+    height: 100%; /* Ensures all cards are the same height */
+    position: relative;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+    .member-card img {
+        width: 100%; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+        transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    }
+
+.member-card-title {
+    margin-top: 0.5rem; /* Consistent space from the top */
+    min-height: 3rem; /* Adjust as needed to ensure titles align */
+}
+
+.member-card-text {
+    flex-grow: 1; /* Ensure text takes up the space pushing the button down */
+}
+
+.member-card:hover img {
+    opacity: 0.5; /* Image becomes semi-transparent on hover */
+}
+
+.member-card-footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Add back the color transition effect on hover, if you liked that */
+.member-card:hover {
+    background-color: #0056b3; /* Change background to blue */
+    color: #ffffff; /* Change text color to white */
+}
+
+
+.section-title {
+    text-align: center; /* Centers the title */
+    font-size: 2rem; /* Sets a larger font size for prominence */
+    color: #0056b3; /* Choose a color that suits your site's theme */
+    margin-top: 5rem; /* Adds space above the title */
+    margin-bottom: 0.5rem; /* Adds space below the title */
+    /* You can add more properties like font-weight, letter-spacing, etc., as needed */
+}
+.unified-solution-sentence {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    color: #0056b3; /* Adjust the color to match your design */
+    /* Add any additional styling you require */
+}
+
+/* Individual member card adjustments for full-width stretch */
+.member-feature-columns .row > div {
+    padding-right: 100px; /* Add padding for spacing between cards */
+    padding-left: 15px; /* Add padding for spacing between cards */
+    flex: 0 0 16.66666667%; /* Six cards per row */
+    max-width: 16.66666667%;
+}
+
+/* Member card title and text adjustments */
+
+.logo-container {
+    height: 120px; /* Set a fixed height for the logo container */
+    display: flex;
+    justify-content: center; /* Center logo horizontally */
+    align-items: center; /* Center logo vertically */
+    margin-bottom: 1rem; /* Space below the logo container */
+}
+
+.member-card-logo {
+    max-width: 95%; /* Logo can fill up to 95% of the card width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the logo fits without stretching */
+}
+
+/* Responsive grid adjustments */
+@media (min-width: 992px) {
+    .member-feature-columns .row > div {
+        flex: 0 0 33.333333%; /* 3 cards per row */
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .member-feature-columns .row > div {
+        flex: 0 0 16.666667%; /* 6 cards per row */
+        max-width: 16.666667%;
+    }
+}
+
+/* Full-width container with padding */
+.container-fluid {
+    padding-left: 10rem; /* Adjust as needed for the left margin */
+    padding-right: 10rem; /* Adjust as needed for the right margin */
+}
+
+    /* Remove the negative margin from the row if it exists */
+    .container-fluid .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+        /* Ensure the cards have some space between them */
+        .container-fluid .row > div {
+            padding: 0 15px; /* This adds spacing between the cards */
+        }
+
+.btn-discover {
+    background-color: #29b6f6; /* A light, modern blue */
+    color: #ffffff;
+    border-radius: 50px; /* Highly rounded edges for a modern pill shape */
+    padding: 15px 60px; /* Larger padding for a longer button */
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Allows for transformations */
+    width: auto; /* Auto width to fit the text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+    .btn-discover:hover {
+        transform: scale(1.05); /* Slightly increase size on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+    }
+
+/*__________________Footer______________________________________________________________________________*/
+.footer {
+    background-color: #fff; /* Match the navigation bar background */
+    color: #333; /* Dark text for readability */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+    .footer h5 {
+        margin-top: 0;
+        color: #fff; /* A color that matches the navigation bar links */
+    }
+
+#footer-logo {
+    max-width: 100%; /* Ensures the logo is responsive */
+}
+
+.footer-rights {
+    padding-top: 1rem; /* Spacing above the rights text */
+}
+
+/* Style the horizontal rule to match the navigation bar style */
+.footer hr {
+    border-top: 1px solid #dcdcdc;
+}
+
+/* Center the text in the footer-rights */
+.footer-rights p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 0; /* Remove the margin for a tighter footer */
+}
+
+
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*__________________Members______________________________________________________________________________*/
+/*__________________Page______________________________________________________________________________*/
+/*__________________ONLY______________________________________________________________________________*/
+
+
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+/* Specific styling for partners banner text */
+.members-banner-text {
+    top: 40%; /* Positions the text lower than center */
+    left: 50%;
+    transform: translate(-50%, -20%); /* Adjusts the position based on the top property */
+    font-size: 1.6rem; /* Adjust subheading font size as needed */
+    /* Add any specific font-sizing, styling, etc., here */
+}
+
+
+.cluster-members-intro {
+    padding: 4rem 0;
+    background-color: #fff; /* Light background to distinguish the section */
+    text-align: center; /* Center-align the text for better readability */
+}
+
+.section-heading {
+    font-size: 2.5rem; /* Large font size for the main heading */
+    color: #0056b3; /* Brand color for headings */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.section-subheading {
+    font-size: 1.75rem; /* Slightly smaller font size for the subheading */
+    color: #007bff; /* Slightly lighter blue for a subtle difference */
+    margin-bottom: 2rem; /* More space below the subheading */
+}
+
+.cluster-overview,
+.cluster-mission {
+    font-size: 1.1rem; /* Regular font size for body text */
+    color: #333333; /* Dark color for legibility */
+    margin-bottom: 1rem; /* Space between paragraphs */
+}
+
+.member-services-title h2 {
+    font-size: 2em; /* Adjust the size as needed */
+    text-align: center; /* Example: center the title */
+    margin-top: 1rem; /* Space above the title */
+    margin-bottom: 2rem; /* Space below the title */
+    /* Other styles as necessary */
+}
+
+.decorative-line {
+    border: 0; /* Removes default border */
+    height: 1px; /* Thin line */
+    background-color: #ccc; /* Line color, adjust as needed */
+    width: 50%; /* Adjust width as desired */
+    margin: 1rem auto; /* Centers the line and adds space around it */
+}
+
+.member-page-description {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.member-page-section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.member-page-logo-container {
+    width: 100%;
+    height: 120px; /* Increased height for the logo container */
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.member-page-card-logo {
+    max-height: 95%; /* Allows the logo to scale in height within the container */
+    width: auto; /* Adjusts width automatically to maintain aspect ratio */
+}
+
+.member-page-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 350px;
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Keeps the text color consistent */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline */
+}
+}
+
+.member-page-card-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem; /* Reduced margin */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set the desired text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.member-page-card-text {
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set the desired text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.member-page-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Remove underline */
+}
+
+@media (min-width: 992px) {
+    .member-page-cards .row > .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+
+/* Button at the bottom of the member cards */
+.member-page-cards .btn-discover {
+    /* Styles for the discover button */
+}
+
+/* Styles for the modal */
+.member-page-cards .modal-content {
+    /* Styles for the modal interior */
+}
+
+
+/*________Modals__________________*/
+/* Responsive adjustments */
+@media (min-width: 992px) {
+    .member-page-cards .row > .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
 }
 
 /* Modal styles */
-.modal {
+.member-page-modal-content {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.member-page-modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.member-page-modal-title {
+    color: #0056b3;
+}
+
+.member-page-modal-body h6 {
+    color: #0056b3;
+    margin-top: 20px;
+}
+
+.member-page-modal-body p, .member-page-modal-body li {
+    margin-bottom: 10px;
+}
+
+.member-page-modal-body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.member-page-modal-body li strong {
+    color: #0056b3;
+}
+
+
+.btn-learn-more {
+    background-color: #0056b3; /* Adjust the color to your preference */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-learn-more:hover {
+        background-color: #004494; /* Darken the color on hover */
+    }
+
+
+.contact-info {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+    .contact-info p {
+        margin: 5px 0; /* Adds a little space between each line */
+        font-size: 16px; /* Adjust the size as needed */
+    }
+
+    .contact-info .contact-person strong,
+    .contact-info .contact-phone strong,
+    .contact-info .contact-email a {
+        color: #0056b3; /* This is a shade of blue, use your website's color theme */
+        text-decoration: none; /* Removes the underline from links */
+    }
+
+        .contact-info .contact-email a:hover {
+            text-decoration: underline; /* Adds an underline on hover for better user interaction */
+        }
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*________Partners__________________*/
+/*________Only__________________*/
+/*________Page__________________*/
+/* Partners Page Styles */
+
+/* Specific styling for partners banner text */
+.partners-banner-text {
+    top: 40%; /* Positions the text lower than center */
+    left: 50%;
+    transform: translate(-50%, -20%); /* Adjusts the position based on the top property */
+    font-size: 1.6rem; /* Adjust subheading font size as needed */
+    /* Add any specific font-sizing, styling, etc., here */
+}
+
+
+
+/* Partners Intro Section */
+.partners-intro {
+    padding: 4rem 0;
+    text-align: center; /* Center-align text */
+    background-color: #fff; /* White background */
+}
+
+    /* Heading Styles */
+    .partners-intro .section-heading {
+        font-size: 2.5rem; /* Large font size for the main heading */
+        color: #003366; /* A different shade of blue */
+        margin-bottom: 1rem; /* Space below the heading */
+    }
+
+    /* Subheading Styles */
+    .partners-intro .section-subheading {
+        font-size: 1.75rem; /* Slightly smaller font size for the subheading */
+        color: #0056b3; /* A consistent blue shade */
+        margin-bottom: 2rem; /* More space below the subheading */
+    }
+
+/* Overview Text Styling */
+.partners-overview {
+    font-size: 1.1rem; /* Regular font size for body text */
+    color: #333333; /* Dark color for legibility */
+    margin-bottom: 1rem; /* Space between paragraphs */
+}
+
+/* Partner Services Title */
+.partner-services-title h3 {
+    font-size: 2em; /* Adjust the size as needed */
+    text-align: center; /* Center the title */
+    margin-top: 1rem; /* Space above the title */
+    margin-bottom: 2rem; /* Space below the title */
+    color: #003366; /* Matching shade of blue */
+}
+
+/* Decorative Line */
+.decorative-line {
+    border: 0; /* Removes default border */
+    height: 1px; /* Thin line */
+    background-color: #ccc; /* Line color */
+    width: 50%; /* Adjust width as desired */
+    margin: 1rem auto; /* Centers the line and adds space around it */
+}
+
+/* Partner Cards */
+.partner-page-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 350px;
+}
+
+    /* Partner Card Hover Effect */
+    .partner-page-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+/* Responsive Design for Partner Cards */
+@media (min-width: 992px) {
+    .partner-page-cards .row > .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+/* Partner Card Title */
+.partner-page-card-title {
+    font-size: 1.5rem; /* Title font size */
+    color: #003366; /* Blue shade for titles */
+    margin-bottom: 0.5rem;
+}
+
+/* Partner Card Description */
+.partner-page-card-text {
+    font-size: 1rem; /* Regular font size for text */
+    color: #333; /* Dark color for text */
+    margin-bottom: 1rem; /* Space below the text */
+}
+/* Partner card styling */
+.partner-page-card {
+    /* ... other styles from previous CSS ... */
+    flex-direction: row; /* Align items in a row instead of column */
+    align-items: center; /* Center items vertically */
+    padding: 1rem;
+    text-align: left; /* Align text to the left */
+}
+
+.partner-page-card-logo {
+    max-width: 100px; /* Adjust logo size */
+    margin-right: 1rem; /* Space after logo */
+}
+
+/* Responsive adjustments for the partner card */
+@media (min-width: 768px) {
+    .partner-page-card {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .partner-page-card-logo {
+        margin-bottom: 1rem; /* Space below logo on smaller screens */
+    }
+}
+.partner-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-horizontal {
+    text-align: center;
+}
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*________Product__________________*/
+/*________Only__________________*/
+/*________Page__________________*/
+
+
+/* Base styles for your product page content */
+.product-page-content {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-page-title {
+    text-align: center;
+    color: #004a99;
+    margin-bottom: 30px;
+}
+
+.product-page-text {
+    text-align: center;
+}
+
+/* Table specific styles */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white; /* Adjust this to match the overall background */
+    font-family: 'Your font', sans-serif; /* Specify the font-family */
+    font-size: 16px; /* Specify the font-size */
+}
+
+.product-table-header {
+    background-color: #004a99;
+    color: white;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #004a99;
+    padding: 10px;
+    text-align: left;
+}
+
+
+
+.product-table .product-category,
+.product-table .product-name,
+.product-table .company-name {
+    width: 12%; /* Example width, adjust accordingly */
+}
+
+.product-table .product-table-description {
+    width: 60%; /* Adjust the width as needed */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis to overflow */
+}
+
+/* Striped rows for better readability */
+.product-table tbody tr:nth-child(even) {
+    background-color: #e6f0ff;
+}
+
+/* Hover effect for rows that trigger modals */
+.product-table tbody tr:hover {
+    background-color: #d0e2ff;
+    cursor: pointer; /* Add this line */
+}
+
+@media screen and (max-width: 768px) {
+    .product-page-content {
+        padding: 10px;
+    }
+
+    .product-table {
+        font-size: 14px;
+    }
+}
+
+.learn-more-icon {
+    font-size: 24px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+.learn-more-cell {
+    text-align: center;
+}
+/*________Modals__________________*/
+/* Modal styles for the product page */
+
+/* Styling for product page modals */
+.product-page-modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1;
-    padding-top: 250px;
+    z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9); /* Black with a bit of transparency */
-     overflow: visible !important; /* Ensure that child elements aren't being clipped */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    padding-top: 60px;
 }
 
-.modal-content {
-    margin: auto;
-    display: block;
+.product-page-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
     width: 80%;
-    max-width: 900px;
 }
 
-    .close:hover, .close:focus {
-        color: #bbb;
+.product-page-close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .product-page-close-button:hover,
+    .product-page-close-button:focus {
+        color: black;
         text-decoration: none;
         cursor: pointer;
     }
-
-.modal-content {
-    position: relative; /* Makes sure the buttons are positioned relative to the image */
+.product-page .modal-content {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.modal-prev, .modal-next {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-    color: #333; /* Dark gray for the arrows */
-    border-radius: 50%; /* Makes the buttons circular */
-    width: 40px; /* Width of the buttons */
-    height: 40px; /* Height of the buttons */
-    text-align: center; /* Centers the arrows horizontally */
-    line-height: 40px; /* Centers the arrows vertically */
-    font-size: 24px; /* Adjust the size of the arrows */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for button height */
+.product-page .modal-header {
+    border-bottom: 1px solid #dee2e6;
 }
 
-    .modal-prev:hover, .modal-next:hover {
-        background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent white on hover */
+.product-page .modal-title {
+    color: #0056b3;
+}
+
+.product-page .modal-body h6 {
+    color: #0056b3;
+    margin-top: 20px;
+}
+
+.product-page .modal-body p, .product-page .modal-body li {
+    margin-bottom: 10px;
+}
+
+.product-page .modal-body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-page .modal-body li strong {
+    color: #0056b3;
+}
+
+.product-page .modal-body a {
+    color: #007bff;
+}
+
+
+@media (min-width: 992px) {
+    .product-page .row > .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.btn-close-blue {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    border-color: #007bff;
+}
+
+    .btn-close-blue:hover {
+        background-color: #0056b3; /* A darker blue for hover effect */
+        border-color: #0056b3;
     }
 
-.modal-prev {
-    left: 35px; /* Positioning to the left */
+.product-page .modal-body a.btn-learn-more {
+    color: white;
 }
 
-.modal-next {
-    right: 35px; /* Positioning to the right */
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*________members__________________*/
+/*________pages__________________*/
+/*________scheme__________________*/
+
+/* Wrapper for PharmaMS content to avoid conflicts */
+
+.private-members-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    color: #333; /* Set a default text color for better consistency */
 }
 
-.close {
-    position: absolute; /* Position relative to modal */
-    top: 150px; /* Distance from the top edge */
-    right: 50px; /* Distance from the right edge */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
-    color: #333; /* Dark gray for the 'X' symbol */
-    border-radius: 50%; /* Makes the button circular */
-    width: 30px; /* Width of the button */
-    height: 30px; /* Height of the button */
-    text-align: center; /* Centers the 'X' horizontally */
-    line-height: 30px; /* Centers the 'X' vertically */
-    font-size: 20px; /* Adjust the size of the 'X' */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-    cursor: pointer; /* Hand cursor for better UX */
+    .private-members-container h1,
+    .private-members-container h2,
+    .private-members-container h3 {
+        color: #0056b3; /* Use the same blue shade for headings as in the members style */
+        margin-bottom: 0.5em;
+    }
+
+    .private-members-container h1 {
+        font-size: 2.6rem; /* Adjust to match section-heading size */
+
+    }
+
+    .private-members-container h2 {
+        font-size: 2rem; /* Adjust to be slightly smaller than h1 */
+    }
+
+    .private-members-container h3 {
+        font-size: 1.75rem; /* Adjust to match section-subheading size */
+    }
+
+    .private-members-container p {
+        font-size: 1.1em; /* Increase the font size for paragraph text */
+        line-height: 1.6;
+        color: #333; /* Maintain the dark grey for readability */
+    }
+    /* You may also want to adjust the font size in lists for consistency */
+    .private-members-container ul.private-members-text {
+        font-size: 1.1em; /* Increase font size for list items */
+    }
+
+/* Adjusting the media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .private-members-container h1 {
+        font-size: 1.75rem; /* Adjust for mobile devices */
+    }
+
+    .private-members-container h2 {
+        font-size: 1.5rem; /* Adjust for mobile devices */
+    }
+
+    .private-members-container h3 {
+        font-size: 1.2rem; /* Adjust for mobile devices */
+    }
 }
-</style >
+
+
+.open-icon {
+    float: right;
+    opacity: 0.6;
+}
+
+.sub-list {
+    padding-left: 50px; /* Adjust the value as needed for the desired indentation */
+}
+
+
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*________contact__________________*/
+/*________us__________________*/
+/*________page__________________*/
+
+/* Specific styling for partners banner text */
+.contact-banner-text {
+    top: 40%; /* Positions the text lower than center */
+    left: 50%;
+    transform: translate(-50%, -20%); /* Adjusts the position based on the top property */
+    font-size: 1.6rem; /* Adjust subheading font size as needed */
+    /* Add any specific font-sizing, styling, etc., here */
+}
+
+
+/* Contact Header Styles */
+.contact-page-contact-header {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #e6f4ff; /* Light blue background similar to the header in the image provided */
+    color: #003366; /* Dark blue text color for contrast */
+}
+
+    .contact-page-contact-header h1 {
+        font-size: 2.5rem; /* Large font size for the main title */
+        font-weight: 700; /* Bold font weight */
+        margin-bottom: 1rem;
+    }
+
+    .contact-page-contact-header p {
+        font-size: 1.2rem; /* Slightly larger paragraph font for readability */
+        max-width: 600px; /* Max-width for optimal reading length */
+        margin-left: auto; /* Center the paragraphs */
+        margin-right: auto;
+    }
+
+/* Reasons to Contact Styles */
+.contact-page-reasons-to-contact {
+    padding: 3rem 0;
+    background: #FFFFFF; /* Pure white background for a clean look */
+    text-align: center;
+}
+
+.contact-page-reason {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #FFFFFF; /* Maintain white for a consistent, clean background */
+    border: 1px solid #e6e6e6; /* Light border for subtle definition */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow for a gentle depth effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .contact-page-reason:hover {
+        transform: translateY(-5px); /* Lift effect on hover for interactivity */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Increased shadow on hover for emphasis */
+    }
+
+    .contact-page-reason h3 {
+        color: #005a9e; /* Blue color for headings */
+        font-size: 1.8rem; /* Larger font size for headings */
+        margin-bottom: 1rem; /* More space below the heading */
+        font-weight: 600; /* Bold font weight for headings */
+    }
+
+    .contact-page-reason p {
+        font-size: 1rem; /* Standard font size for body text */
+        color: #333; /* Darker text color for contrast */
+        line-height: 1.7; /* Comfortable line height for reading */
+        max-width: 600px; /* Max-width for optimal reading length */
+        margin-left: auto; /* Center the paragraphs */
+        margin-right: auto;
+    }
+
+/* Adjustments for multiple columns in the reasons section */
+@media (min-width: 768px) {
+    .contact-page-reasons-to-contact {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .contact-page-reason {
+        width: calc(50% - 40px); /* Adjust the width for spacing */
+        margin: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-page-reason {
+        width: calc(25% - 40px); /* Adjust the width for three columns */
+    }
+}
+
+
+.contact-form {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* This is a thin, friendly font */
+    color: #333; /* Standard text color for better readability */
+}
+
+    .contact-form h3 {
+        font-weight: 300; /* Lighter font-weight for headers */
+        color: #0056b3; /* Soft blue that complements the design */
+    }
+
+    .contact-form label {
+        font-weight: 300; /* Lighter labels */
+        color: #333; /* Maintaining readability */
+    }
+
+    .contact-form .form-control {
+        border: 1px solid #ccc; /* Subtle borders for the input fields */
+        font-weight: 300; /* Lighter font for input text */
+        color: #333; /* Dark color for input text for readability */
+    }
+
+    .contact-form .btn {
+        font-weight: 400; /* Regular font-weight for the button */
+        background-color: #0056b3; /* Adjust to your preferred shade of blue */
+        border: 0; /* Remove border for a cleaner button style */
+
+        padding: 10px 25px; /* Padding for a larger, more clickable button */
+    }
+
+        .contact-form .btn:hover {
+            background-color: #00396b; /* Darker shade on hover */
+        }
+/* Apply a max-width to form for a more modern look on large screens */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+    /* Adjust padding around form elements */
+    .contact-form .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Style the labels for a modern look */
+    .contact-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+        font-weight: 500; /* Semi-bold font for better legibility */
+    }
+
+    /* Enhance visual feedback on input focus */
+    .contact-form .form-control:focus {
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1rem;
+    }
+}
+
+/* Coordinator Card Styles */
+.coordinator-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .coordinator-card:hover {
+        transform: translateY(-5px); /* Slight lift for interactive hover effect */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for emphasis */
+    }
+
+    .coordinator-card .card-body {
+        padding: 1.5rem; /* Comfortable padding around text */
+    }
+
+    .coordinator-card .card-title {
+        color: #0056b3; /* Use primary color for the title */
+        margin-bottom: 0.5rem; /* Spacing below the title */
+    }
+
+    .coordinator-card .card-text {
+        color: #333; /* Dark grey color for better readability */
+        margin-bottom: 1rem; /* Spacing below the paragraph */
+    }
+
+.coordinator-card-img {
+    height: 500px; /* Example height - adjust as necessary */
+    object-fit: cover; /* This will cover the area without stretching the image */
+    width: 100%; /* This will ensure the image covers the full card width */
+}
+.btn-linkedin {
+    background-color: #007bb5; /* LinkedIn blue */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners for buttons */
+    padding: 8px 16px;
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s ease;
+}
+
+    .btn-linkedin:hover {
+        background-color: #005983; /* Darker LinkedIn color on hover */
+    }
+
+/* Ensure form and card take full width on smaller screens */
+@media (max-width: 768px) {
+    .contact-form, .coordinator-card {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*________events__________________*/
+/*________only__________________*/
+/*________page__________________*/
+.event-detail-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.event-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.event-image {
+    flex-basis: 40%;
+    overflow: hidden;
+}
+
+    .event-image .main-image {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+        .event-image .main-image:hover {
+            transform: scale(1.05);
+        }
+
+.event-content {
+    flex-basis: 60%;
+    padding: 2rem;
+}
+
+.event-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.event-date,
+.event-location {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.event-description h4 {
+    font-size: 1.2rem;
+    color: #005a9e;
+    margin-bottom: 0.5rem;
+}
+
+.event-description p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-image,
+    .event-content {
+        flex-basis: 100%;
+    }
+}
+
+
+.event-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 1rem;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center-align the thumbnail */
+}
+
+    .event-thumbnails img {
+        width: 50%; /* Adjust the width of the thumbnail image as needed */
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        margin-top: 1rem; /* Add space between main image and thumbnail */
+    }
+
+        .event-thumbnails img:hover {
+            transform: scale(1.1);
+        }
+
+/* Ensure images in modal are responsive and do not exceed the viewport height */
+.event-modal-content img {
+    max-height: 80vh; /* 80% of the viewport height */
+    max-width: 100%; /* To maintain aspect ratio */
+    object-fit: contain; /* To ensure the image fits within the container without stretching */
+    margin: auto; /* To center the image within the modal */
+    display: block; /* Images are inline by default */
+}
+
+/* Ensure the modal content is vertically centered */
+.event-modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.event-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.event-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.event-modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.mySlides {
+    max-width: 100%;
+    max-height: 80vh; /* Adjust as needed */
+    object-fit: contain;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*________about__________________*/
+/*________us__________________*/
+/*________page__________________*/
+/* Specific styles for the About Us page */
+
+.about-banner-text {
+    top: 40%; /* Positions the text lower than center */
+    left: 50%;
+    transform: translate(-50%, -20%); /* Adjusts the position based on the top property */
+    font-size: 2.6rem; /* Adjust subheading font size as needed */
+    /* Add any specific font-sizing, styling, etc., here */
+}
+/* About Us page specific styles */
+.about-us-section {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.about-us-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-us-title {
+    font-size: 2.5em;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-us-intro,
+.about-us-mission,
+.about-us-members,
+.about-us-synergy,
+.about-us-partners,
+.about-us-partnership,
+.about-us-vision,
+.about-us-impact {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-us-subheading {
+    font-size: 1.8em;
+    color: #0d47a1;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .about-us-container {
+        width: 95%;
+    }
+
+    .about-us-title,
+    .about-us-subheading {
+        font-size: 2em;
+    }
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+    .about-us-title,
+    .about-us-subheading {
+        font-size: 1.5em;
+    }
+
+    .about-us-intro,
+    .about-us-mission,
+    .about-us-members,
+    .about-us-synergy,
+    .about-us-partners,
+    .about-us-partnership,
+    .about-us-vision,
+    .about-us-impact {
+        font-size: 0.9em;
+    }
+}
+
+
+/*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
+/*________eu project__________________*/
+/*__________________________*/
+/*________page__________________*/
+
+.eu-project {
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 80px; /* Add top margin */
+}
+
+.eu-project-content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1500px; /* Set a max-width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+.eu-project-text {
+    width: 75%;
+    padding-right: 20px; /* Add padding between the text and the logo */
+}
+
+.eu-project-logo {
+    width: 25%;
+    padding-left: 20px; /* Add padding to move the logo more to the left */
+    text-align: left; /* Align the logo to the left */
+}
+
+    .eu-project-logo img {
+        width: 300px; /* Make the logo bigger */
+        max-width: 100%; /* Ensure it's responsive */
+    }
+
+/* Add responsive design as needed */
+@media (max-width: 992px) {
+    .eu-project-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .eu-project-text,
+    .eu-project-logo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .eu-project-logo {
+        margin-top: 20px;
+    }
+
+        .eu-project-logo img {
+            width: 500px; /* Adjust the logo size on smaller screens if needed */
+        }
+}

@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaMS | Pharma IT Cluster</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="photos/white_background_logo.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
+                <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="private-members-container mt-4">
+        <!-- Header Section with Company Name and Logo -->
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="private-members-title">Pharma Management Solutions </h1>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <img src="photos/logo1.png" alt="PharmaMS Logo" class="img-fluid private-members-logo">
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Welcome to PharmaMS</h2>
+            <p class="private-members-text">
+                Founded in 2008, PharmaMS has been dedicated to advancing pharmacy businesses with our industry-leading expertise and innovative technological solutions. Tailored for pharmacy wholesalers, chains, associations, and independent pharmacies, we ensure every aspect of your operation is streamlined for success.
+            </p>
+        </div>
+
+        <!-- Why PharmaMS Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Why PharmaMS?</h2>
+            <ul class="private-members-text">
+                <li><strong>Experience:</strong> Decades of industry presence, propelling clients accumulating 8000+ pharmacy stores from modest beginnings to market leaders.</li>
+                <li><strong>Innovation:</strong> Cutting-edge solutions like Horizon and Redistribution, leading with AI and cloud systems.</li>
+                <li><strong>Expertise:</strong> Deep knowledge in pharma retail and wholesale, offering strategic insights for success.</li>
+                <li><strong>Results:</strong> Proven impact on reducing workload, minimizing lost sales, and optimizing inventory.</li>
+            </ul>
+        </div>
+
+        <!-- Products and Services Table -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Our Products and Services</h2>
+            <p class="private-members-text">(<strong>Click on a row </strong> to learn more about each service/product.)</p>
+            <table class="product-table">
+                <thead class="product-table-header">
+                    <tr>
+                        <th>Category</th>
+                        <th>Service/Product</th>
+                        <th>Description</th>
+                        <th>More</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-bs-toggle="modal" data-bs-target="#diagnosticModal">
+                        <td>Consultancy</td>
+                        <td>Diagnostic Analysis</td>
+                        <td>Your business health check-up. A complimentary service identifying areas for growth and improvement.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#auditServiceModal">
+                        <td>Consultancy</td>
+                        <td>Audit</td>
+                        <td>A deep dive into your business's vital signs, prescribing actionable solutions.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#changeManagementModal">
+                        <td>Consultancy</td>
+                        <td>Leading Through Changes</td>
+                        <td>Strategic advice and guidance for pharmacies ready to embrace transformation.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#inventoryManagementModal">
+                        <td>Consultancy</td>
+                        <td>Inventory Management Implementation</td>
+                        <td>AI and smart logic for tailored inventory and assortment management systems.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#salesForceModal">
+                        <td>Consultancy</td>
+                        <td>Sales Force for Partners</td>
+                        <td>Expert sales team equipped to promote genuine solutions that make an impact.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- Ready to Transform Your Business Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Ready to Transform Your Business?</h2>
+            <p class="private-members-text">
+                Embrace our innovative services for immediate integration and long-term prosperity. Discover detailed solutions for elevating your business at <a href="http://www.pharmams.com" target="_blank">www.pharmams.com</a> or contact us for a tailored consultation. <strong>Join 8000+ pharmacies in experiencing the PharmaMS difference.</strong>
+            </p>
+            <p class="private-members-text">
+                Pharma Management Solutions - Bridging Expertise and Innovation for Your Pharmacy's Triumph.
+            </p>
+            <p class="private-members-text">
+                Let's start working together with <strong>free diagnostic</strong>  to distinguish your business operational health!
+            </p>
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <p class="contact-person">Contact Person: <strong>Remigijus Kozeniauskas</strong></p>
+                <p class="contact-phone">Phone: <strong>+1 (555) 123-4567</strong></p>
+                <p class="contact-email">Email: <a href="mailto:remigijus.kozeniauskas@pharmams.com">remigijus.kozeniauskas@pharmams.com</a></p>
+            </div>
+        </div>
+
+        <!-- Modals for Each Product -->
+        <!-- Diagnostic Analysis Modal -->
+        <div class="modal fade product-page" id="diagnosticModal" tabindex="-1" role="dialog" aria-labelledby="diagnosticModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="diagnosticModalLabel">Diagnostic Analysis - Uncover Your Business Potential</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Our Diagnostic service is a free consulting service that provides a comprehensive analysis of your business to identify potential areas for improvement. Unlike competitors who may rely on emotional selling, our diagnostics offer clear, objective insights into your current challenges and potential.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            Using a Cloud System, clients can upload CSV format files containing 15-24 months of inventory data. Our system will analyze this data, perform simulations, and generate reports highlighting key issues and areas for potential improvement.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Objective Analysis: Gain an unbiased understanding of your operational health.</li>
+                            <li>Identify Improvement Areas: Discover specific areas where your business can grow and improve.</li>
+                            <li>Strategic Direction: Make informed decisions about where to focus your efforts.</li>
+                        </ul>
+
+                        <!-- Pricing -->
+                        <h6>Pricing:</h6>
+                        <p>
+                            The Diagnostic service is offered FREE of charge. Travel and lodging (T&L) expenses for our experts to visit client sites for large-scale diagnostics may be covered by the client.
+                        </p>
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Audit Service Modal -->
+        <div class="modal fade product-page" id="auditServiceModal" tabindex="-1" role="dialog" aria-labelledby="auditServiceModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="auditServiceModalLabel">PharmaMS Audit Service - In-depth Analysis for Strategic Insights</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Our PharmaMS Audit Service delves deep into your operations to uncover the root causes of issues and provide actionable solutions. It's like a specialist doctor for your business, diagnosing and prescribing precisely what you need for optimal health.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            Using a "Why, Why, Why" approach, our experts work closely with your team to dissect each issue, peeling back layers to reveal fundamental causes. We then collaborate to develop a strategic action plan, tailored to your unique situation.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Deep Analysis: Uncover the core issues impacting your business.</li>
+                            <li>Custom Solutions: Tailored action plans for impactful results.</li>
+                            <li>Strategic Insight: Gain clarity and direction for future growth.</li>
+                        </ul>
+
+                        <!-- Pricing -->
+                        <h6>Pricing:</h6>
+                        <p>
+                            Our audit service ranges from €3,000 to €5,000 per audit. First-time clients receive a discount, and special pricing is available for bundled services.
+                        </p>
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for Leading Through Changes -->
+        <!-- Leading Through Changes Modal -->
+        <div class="modal fade product-page" id="changeManagementModal" tabindex="-1" role="dialog" aria-labelledby="changeManagementModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="changeManagementModalLabel">Leading Through Changes - Navigating Your Business to Success</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Leading Through Changes is our strategic session designed to guide your business through transformative periods. It's a roadmap to navigate complex changes, ensuring your organization's agility and growth.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            We facilitate strategic sessions focused on identifying challenges and opportunities within your business. Our approach includes a comprehensive analysis of your business model, market trends, and internal processes to craft a bespoke action plan.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Strategic Planning: Develop a clear, actionable strategy for the year ahead.</li>
+                            <li>Change Management: Equip your team with the tools and mindset to adapt to change effectively.</li>
+                            <li>Competitive Edge: Stay ahead in a rapidly evolving business environment.</li>
+                        </ul>
+
+                        <!-- Pricing -->
+                        <h6>Pricing:</h6>
+                        <p>
+                            Contact us for a tailored pricing structure based on your specific business needs and session scope.
+                        </p>
+
+                        <!-- Contact Information -->
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Inventory Management Implementation -->
+        <!-- Inventory Management Implementation Modal -->
+        <div class="modal fade product-page" id="inventoryManagementModal" tabindex="-1" role="dialog" aria-labelledby="inventoryManagementModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="inventoryManagementModalLabel">Inventory Management Implementation - Optimizing Your Stock for Success</h5>
+
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Our Inventory Management Implementation service is designed to revolutionize your inventory processes. Utilizing Gutsaga Technology Cloud (GTC) products, we streamline and optimize your stock management, enhancing operational efficiency.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            We begin with a thorough analysis of your current inventory system, identifying areas for improvement. The GTC solutions are then tailored to fit your specific needs, ensuring seamless integration with your existing operations.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Reduced Costs: Minimize excess stock and lower storage costs.</li>
+                            <li>Efficiency Boost: Streamlined processes for faster, more accurate inventory management.</li>
+                            <li>Data-Driven Decisions: Leverage real-time data for better stock control and decision-making.</li>
+                        </ul>
+
+                        <!-- Pricing -->
+                        <h6>Pricing:</h6>
+                        <p>
+                            Custom project-based pricing. Contact us for a tailored quote based on your business needs.
+                        </p>
+
+                        <!-- Contact Information -->
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sales Force for Partners Modal -->
+        <div class="modal fade product-page" id="salesForceModal" tabindex="-1" role="dialog" aria-labelledby="salesForceModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="salesForceModalLabel">Sales Force for Partners - Expanding Your Market Reach</h5>
+
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Our Sales Force for Partners service offers a unique approach to market expansion. We leverage our deep industry knowledge and expertise to promote your products and services effectively.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            Our team of sales professionals, who are well-versed in the pharma industry, quickly understand your product's unique selling points and align them with market needs, ensuring targeted and impactful promotions.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Enhanced Market Penetration: Access to diverse market segments with strategic sales efforts.</li>
+                            <li>Expert Representation: Professional sales team that understands and effectively communicates your product's value.</li>
+                            <li>Increased Sales: Proven strategies that lead to higher sales volume and broader client reach.</li>
+                        </ul>
+
+                        <!-- Pricing -->
+                        <h6>Pricing:</h6>
+                        <p>
+                            Commission-based structure tailored to partners’ needs. Contact us for specific pricing details.
+                        </p>
+
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat modals for other services/products with corresponding ID and content -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="photos/white_background_logo.png" alt="Association Logo" id="footer-logo" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Operational Coordinator: Augustas Gucaga</p>
+                    <p>+37065512652</p>
+                    <p>augustas.gucaga@pharmams.com</p>
+                    <p>
+                        K. Petrausko 26-214,
+                        Kaunas, Lithuania
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-rights text-center">
+            <p>© 2024 Pharma IT Cluster. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    <script src="Script1.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma IT Cluster</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="photos/white_background_logo.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
+                <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="banner-landing events-banner">
+        <!-- Content here -->
+    </header>
+
+    <section class="event-detail-container">
+        <div class="event-card">
+            <div class="event-image">
+                <img src="photos/bdRowa_presentation.jpg" alt="BD-Rowa Annual Conference" class="main-image">
+                <!-- Thumbnails -->
+                <div class="event-thumbnails">
+                    <img src="photos/bdRowa_cluster.jpg" alt="Thumbnail 1" onclick="openModal('myModal1');currentSlide(1, 'myModal1')">
+                </div>
+            </div>
+            <div class="event-content">
+                <h3 class="event-title">BD-Rowa Annual Conference</h3>
+                <p class="event-date">November 28-30, 2023</p>
+                <p class="event-location">Romania</p>
+                <div class="event-description">
+                    <h4>Activities and Objectives:</h4>
+                    <p>Participation in BD's annual partner conference, one of the world's largest medical technology companies. Showcasing the cluster's work and exploring collaborations with industry leaders.</p>
+                    <h4>Benefits:</h4>
+                    <p>Established vital contacts for future collaborations and market expansion. Networking led to significant new leads, benefiting Pharma MS and Equinox.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="myModal1" class="event-modal">
+            <span class="event-close" onclick="closeModal('myModal1')">&times;</span>
+            <div class="event-modal-content">
+                <div class="mySlides">
+                    <img src="photos/bdRowa_cluster.jpg" alt="BD-Rowa Presentation">
+                </div>
+                <!-- Add more slides as needed -->
+                <a class="prev" onclick="plusSlides(-1, 'myModal1')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'myModal1')">&#10095;</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="photos/white_background_logo.png" alt="Association Logo" id="footer-logo" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Coordinator: Seržas Gucaga</p>
+                    <p>+37068680441</p>
+                    <p>serzas.gucaga@pharmams.com</p>
+                    <p>
+                        K. Petrausko 26-323,
+                        Kaunas, Lithuania
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-rights text-center">
+            <p>© 2024 Pharma IT Cluster. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out', // default easing for AOS animations
+            once: true, // whether animation should happen only once - while scrolling down
+        });
+    </script>
+    <script>
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        function currentSlide(slideIndex, modalId) {
+            showSlides(slideIndex, modalId);
+        }
+
+        function plusSlides(n, modalId) {
+            showSlides(slideIndex += n, modalId);
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Thumbnail image controls
+        function currentSlide(n, modalId) {
+            showSlides(slideIndex = n, modalId);
+        }
+
+        function showSlides(n, modalId) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        window.onclick = function (event) {
+            var modals = document.getElementsByClassName('event-modal');
+            for (var i = 0; i < modals.length; i++) {
+                // Use the closeModal function to close the modal if the background is clicked
+                if (event.target == modals[i]) {
+                    closeModal(modals[i].id);
+                }
+            }
+        }
+    </script>
+    <script src="Script1.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma IT Cluster</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="photos/white_background_logo.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
+                <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="product-page-content">
+        <h1 class="product-page-title">Products and Services of all Members and Partners</h1>
+        <p class="product-page-text">(<strong>Click on a row </strong> to learn more about each service/product.)</p>
+        <table class="product-table">
+            <thead>
+                <tr class="product-table-header">
+                    <th class="product-category">Category</th>
+                    <th class="product-name">Product Name</th>
+                    <th class="company-name">Company Name</th>
+                    <th class="product-table-description">Description</th>
+                    <th>More</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--PharmaMS-->
+                <tr data-bs-toggle="modal" data-bs-target="#diagnosticModal">
+                    <td class="product-category">Consultancy</td>
+                    <td class="product-name">Audit</td>
+                    <td class="company-name">PharmaMS</td>
+                    <td class="product-table-description">Your business health check-up. A complimentary service identifying areas for growth and improvement.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#auditServiceModal">
+                    <td class="product-category">Consultancy</td>
+                    <td class="product-name">Audit</td>
+                    <td class="company-name">PharmaMS</td>
+                    <td class="product-table-description">A deep dive into your business's vital signs, prescribing actionable solutions.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#changeManagementModal">
+                    <td class="product-category">Consultancy</td>
+                    <td class="product-name"> Through Changes</td>
+                    <td class="company-name">PharmaMS</td>
+                    <td class="product-table-description">Strategic advice and guidance for pharmacies ready to embrace transformation.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#inventoryManagementModal">
+                    <td class="product-category">Consultancy</td>
+                    <td class="product-name">Inventory Management Implementation</td>
+                    <td class="company-name">PharmaMS</td>
+                    <td class="product-table-description">AI and smart logic for tailored inventory and assortment management systems.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#salesForceModal">
+                    <td class="product-category">Consultancy</td>
+                    <td class="product-name">Sales Force for Partners</td>
+                    <td class="company-name">PharmaMS</td>
+                    <td class="product-table-description">Expert sales team equipped to promote genuine solutions that make an impact.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <!--ISB-->
+                <tr data-bs-toggle="modal" data-bs-target="#horizonModal">
+                    <td class="product-category">Inventory Management</td>
+                    <td class="product-name">Horizon</td>
+                    <td class="company-name">ISB</td>
+                    <td class="product-table-description">Our flagship AI-driven inventory optimization system designed to predict and adapt to market demands in real-time.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#redistributionModal">
+                    <td class="product-category">Inventory Management</td>
+                    <td class="product-name">Redistribution</td>
+                    <td class="company-name">ISB</td>
+                    <td class="product-table-description">Efficiently manage and redirect surplus inventory between outlets to minimize waste and maximize availability.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#outletModal">
+                    <td class="product-category">Inventory Management</td>
+                    <td class="product-name">Outlet</td>
+                    <td class="company-name">ISB</td>
+                    <td class="product-table-description">Customizable point-of-sale systems that streamline checkout, manage sales, and integrate seamlessly with inventory.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#promotionsModal">
+                    <td class="product-category">Inventory Management</td>
+                    <td class="product-name">Promotions</td>
+                    <td class="company-name">ISB</td>
+                    <td class="product-table-description">Dynamic promotional management tools that target sales efforts and tailor discounts to customer buying patterns.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#assortmentModal">
+                    <td class="product-category">Assortment Planning</td>
+                    <td class="product-name">Assortment</td>
+                    <td class="company-name">ISB</td>
+                    <td class="product-table-description">Strategic assortment planning solutions that optimize product mix and placement for maximum sales impact.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <tr data-bs-toggle="modal" data-bs-target="#reportsModal">
+                    <td class="product-category">Data Analysis</td>
+                    <td class="product-name">Reports</td>
+                    <td class="company-name">ISB</td>
+                    <td class="product-table-description">Comprehensive reporting tools providing insights into sales, inventory levels, and overall business health.</td>
+                    <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                </tr>
+                <!-- More rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <!-- Product Modal for PharmaMS -->
+    <!-- Modals for Each Product -->
+    <!-- Diagnostic Analysis Modal -->
+    <div class="modal fade product-page" id="diagnosticModal" tabindex="-1" role="dialog" aria-labelledby="diagnosticModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="diagnosticModalLabel">Diagnostic Analysis - Uncover Your Business Potential</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Our Diagnostic service is a free consulting service that provides a comprehensive analysis of your business to identify potential areas for improvement. Unlike competitors who may rely on emotional selling, our diagnostics offer clear, objective insights into your current challenges and potential.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        Using a Cloud System, clients can upload CSV format files containing 15-24 months of inventory data. Our system will analyze this data, perform simulations, and generate reports highlighting key issues and areas for potential improvement.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Objective Analysis: Gain an unbiased understanding of your operational health.</li>
+                        <li>Identify Improvement Areas: Discover specific areas where your business can grow and improve.</li>
+                        <li>Strategic Direction: Make informed decisions about where to focus your efforts.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        The Diagnostic service is offered FREE of charge. Travel and lodging (T&L) expenses for our experts to visit client sites for large-scale diagnostics may be covered by the client.
+                    </p>
+                </div>
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="pharmams.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About PharmaMS</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audit Service Modal -->
+    <div class="modal fade product-page" id="auditServiceModal" tabindex="-1" role="dialog" aria-labelledby="auditServiceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="auditServiceModalLabel">PharmaMS Audit Service - In-depth Analysis for Strategic Insights</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Our PharmaMS Audit Service delves deep into your operations to uncover the root causes of issues and provide actionable solutions. It's like a specialist doctor for your business, diagnosing and prescribing precisely what you need for optimal health.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        Using a "Why, Why, Why" approach, our experts work closely with your team to dissect each issue, peeling back layers to reveal fundamental causes. We then collaborate to develop a strategic action plan, tailored to your unique situation.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Deep Analysis: Uncover the core issues impacting your business.</li>
+                        <li>Custom Solutions: Tailored action plans for impactful results.</li>
+                        <li>Strategic Insight: Gain clarity and direction for future growth.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        Our audit service ranges from €3,000 to €5,000 per audit. First-time clients receive a discount, and special pricing is available for bundled services.
+                    </p>
+                </div>
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="pharmams.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About PharmaMS</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Leading Through Changes -->
+    <!-- Leading Through Changes Modal -->
+    <div class="modal fade product-page" id="changeManagementModal" tabindex="-1" role="dialog" aria-labelledby="changeManagementModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="changeManagementModalLabel">Leading Through Changes - Navigating Your Business to Success</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Leading Through Changes is our strategic session designed to guide your business through transformative periods. It's a roadmap to navigate complex changes, ensuring your organization's agility and growth.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        We facilitate strategic sessions focused on identifying challenges and opportunities within your business. Our approach includes a comprehensive analysis of your business model, market trends, and internal processes to craft a bespoke action plan.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Strategic Planning: Develop a clear, actionable strategy for the year ahead.</li>
+                        <li>Change Management: Equip your team with the tools and mindset to adapt to change effectively.</li>
+                        <li>Competitive Edge: Stay ahead in a rapidly evolving business environment.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        Contact us for a tailored pricing structure based on your specific business needs and session scope.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="pharmams.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About PharmaMS</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Inventory Management Implementation -->
+    <!-- Inventory Management Implementation Modal -->
+    <div class="modal fade product-page" id="inventoryManagementModal" tabindex="-1" role="dialog" aria-labelledby="inventoryManagementModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="inventoryManagementModalLabel">Inventory Management Implementation - Optimizing Your Stock for Success</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Our Inventory Management Implementation service is designed to revolutionize your inventory processes. Utilizing Gutsaga Technology Cloud (GTC) products, we streamline and optimize your stock management, enhancing operational efficiency.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        We begin with a thorough analysis of your current inventory system, identifying areas for improvement. The GTC solutions are then tailored to fit your specific needs, ensuring seamless integration with your existing operations.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Reduced Costs: Minimize excess stock and lower storage costs.</li>
+                        <li>Efficiency Boost: Streamlined processes for faster, more accurate inventory management.</li>
+                        <li>Data-Driven Decisions: Leverage real-time data for better stock control and decision-making.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        Custom project-based pricing. Contact us for a tailored quote based on your business needs.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="pharmams.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About PharmaMS</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Sales Force for Partners Modal -->
+    <div class="modal fade product-page" id="salesForceModal" tabindex="-1" role="dialog" aria-labelledby="salesForceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="salesForceModalLabel">Sales Force for Partners - Expanding Your Market Reach</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Our Sales Force for Partners service offers a unique approach to market expansion. We leverage our deep industry knowledge and expertise to promote your products and services effectively.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        Our team of sales professionals, who are well-versed in the pharma industry, quickly understand your product's unique selling points and align them with market needs, ensuring targeted and impactful promotions.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Enhanced Market Penetration: Access to diverse market segments with strategic sales efforts.</li>
+                        <li>Expert Representation: Professional sales team that understands and effectively communicates your product's value.</li>
+                        <li>Increased Sales: Proven strategies that lead to higher sales volume and broader client reach.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        Commission-based structure tailored to partners’ needs. Contact us for specific pricing details.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <h6>Contact Us:</h6>
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="pharmams.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About PharmaMS</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Product for ISB -->
+    <!-- Horizon Inventory Management Modal -->
+    <div class="modal fade product-page" id="horizonModal" tabindex="-1" role="dialog" aria-labelledby="horizonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="horizonModalLabel">Horizon Inventory Management - Advanced Adequacy in Stock Levels</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Horizon Inventory Management, founded by Gutsaga Technology, is a paradigm shift from traditional forecasting to a dynamic, AI-enhanced approach to inventory control. Utilizing the Theory of Magnetism and AI, Horizon ensures your inventory levels are perpetually optimized.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        Each day, Horizon processes your latest inventory data. Our sophisticated engines analyze stock levels for adequacy, utilizing Magnetism Theory and AI to provide immediate recommendations for replenishment, thus avoiding the pitfalls of forecast-based systems.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Real-time Inventory Management: Horizon's daily adjustments ensure optimal stock levels, contributing to at least 20% less inventory than traditional forecasting systems.</li>
+                        <li>Enhanced Automation: Reduce the hours spent on inventory management, allowing your employees to focus on other critical tasks.</li>
+                        <li>Improved Financial Outcomes: Experience better inventory turnover and return on investment, coupled with reduced lost sales.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        Horizon offers competitive pricing based on the size and scope of your operations. We invite you to contact us for a detailed quote and to explore how Horizon can transform your inventory management.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="isb.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About ISB</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Redistribution Management Modal -->
+    <div class="modal fade product-page" id="redistributionModal" tabindex="-1" role="dialog" aria-labelledby="redistributionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="redistributionModalLabel">Redistribution - Automated Stock Balancing</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Redistribution is our automated system designed to optimize inventory across various store locations, reducing overstock and preventing product wastage through intelligent product reallocation.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        The system automatically identifies products that are overstocked, nearing expiration, or experiencing low sales at one location and reallocates them to stores where they are in higher demand. This process includes handling store closures and department changes.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Enhanced Inventory Turnover: Improve your inventory turnover rates and financial performance.</li>
+                        <li>Reduced Waste: Minimize the need to discount or dispose of overstock and near-expiry products.</li>
+                        <li>Efficient Management: Simplify the process of managing inventory during store closures or department shifts.</li>
+                        <li>Increased Sales Opportunities: Maximize sales potential by ensuring high-demand products are available where needed.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        Contact us for a tailored pricing plan based on the specific needs and scale of your business operations.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="isb.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About ISB</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Outlet Management Modal -->
+    <div class="modal fade product-page" id="outletModal" tabindex="-1" role="dialog" aria-labelledby="outletModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="outletModalLabel">Outlet - Advanced Inventory Clearance</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Outlet by Gutsaga Technology is a cutting-edge solution designed to automatically manage and reduce inventory levels for specific SKUs across the entire retail network, including warehouses and points of sale (POS), by a target date.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        Outlet automatically adjusts product prices based on price elasticity and risk management, and redistributes SKUs between POSs to minimize logistics costs, ensuring efficient clearance of inventory by the specified target date.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Time-Saving for Category Managers: Reduces the workload of managing sell-out products, traditionally taking up 20%-40% of their time.</li>
+                        <li>Increased Revenue: Enhances the potential to earn more by selling products more efficiently before deadlines.</li>
+                        <li>Shelf Management: Ensures timely clearance of old products to make space for new inventory.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        For detailed pricing information, please contact us so we can provide a tailored solution based on your specific requirements.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="isb.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About ISB</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Promotions Management Modal -->
+    <div class="modal fade product-page" id="promotionsModal" tabindex="-1" role="dialog" aria-labelledby="promotionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="promotionsModalLabel">Promotions - Advanced Sales and Stock Management</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        The Promotions technology, developed through a collaboration between GT and ISB, revolutionizes retail sales enhancement. It is specifically designed to optimize promotional activities in retail, particularly beneficial for cosmetic stores and pharmacies.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        This system utilizes advanced forecasting methods and real-time adjustments through the 'Horizon' feature during active promotions. It efficiently selects products for promotions, focusing on fast-moving items and reducing overstock.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Effective Stock Management: Reduces unwanted overstock and minimizes lost sales during promotions.</li>
+                        <li>Targeted Promotions: Identifies and promotes products that are most likely to generate sales.</li>
+                        <li>Dynamic Adjustments: Real-time changes during promotions for optimal performance.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        Please contact us for detailed pricing information. We offer customized solutions to match your specific needs.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="isb.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About ISB</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Assortment Management Modal -->
+    <div class="modal fade product-page" id="assortmentModal" tabindex="-1" role="dialog" aria-labelledby="assortmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="assortmentModalLabel">Assortment - Strategic Product Placement and Optimization</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        The Assortment subproduct from ISB is designed to strategically manage product placements in retail. It focuses on spreading high-ranking products across Points of Sale (POS) and removing long-term unsold items, optimizing the retail space efficiently.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        Utilizing a sophisticated system, Assortment calculates rankings based on sales units, volume, and margin for each SKU across POS. It identifies missing high-ranking products in POS assortments and suggests their addition. Simultaneously, it identifies products with extended no-sale periods and recommends their removal.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Increased Sales: Ensuring high-demand products are available at the right POS.</li>
+                        <li>Improved Customer Satisfaction: Offering a more tailored product range to meet consumer demands.</li>
+                        <li>Better Inventory Management: Enhancing ITR and ROI by eliminating stagnant stock.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        For detailed pricing information, please reach out to us. We offer solutions that cater to your unique business requirements.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="isb.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About ISB</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Reports Management Modal -->
+    <div class="modal fade product-page" id="reportsModal" tabindex="-1" role="dialog" aria-labelledby="reportsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content product-page-modal-content">
+                <div class="modal-header product-page-modal-header">
+                    <h5 class="modal-title product-page-modal-title" id="reportsModalLabel">Reports - In-depth Analysis and Strategic Insight</h5>
+                </div>
+                <div class="modal-body product-page-modal-body">
+                    <!-- Service Description -->
+                    <p>
+                        Developed by ISB, with the expertise of GT and PharmaMS, the Reports subproduct is an essential tool in inventory management, offering in-depth analysis for top management and specialists.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h6>How It Works:</h6>
+                    <p>
+                        Reports consist of two parts: First, focused reports aiding top management in identifying and addressing real-time issues. Second, a versatile reporting cube (CUBE), capable of generating a wide range of reports.
+                    </p>
+
+                    <!-- Benefits -->
+                    <h6>Benefits:</h6>
+                    <ul>
+                        <li>Targeted Insights: Tailored reports for top management and specialists to focus on critical areas.</li>
+                        <li>Flexibility: Ability to generate diverse reports for various needs.</li>
+                        <li>Data Efficiency: Efficient handling of large data volumes without incurring extra costs.</li>
+                    </ul>
+
+                    <!-- Pricing -->
+                    <h6>Pricing:</h6>
+                    <p>
+                        For detailed pricing information, please contact us. We offer customized solutions based on your specific business requirements.
+                    </p>
+                </div>
+                <!-- Contact Information -->
+                <div class="modal-footer product-page-modal-footer">
+                    <a href="isb.html" class="btn btn-learn-more" style="margin-right: auto;">Learn More About ISB</a>
+                    <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="photos/white_background_logo.png" alt="Association Logo" id="footer-logo" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Operational Coordinator: Augustas Gucaga</p>
+                    <p>+37065512652</p>
+                    <p>augustas.gucaga@pharmams.com</p>
+                    <p>
+                        K. Petrausko 26-214,
+                        Kaunas, Lithuania
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-rights text-center">
+            <p>© 2024 Pharma IT Cluster. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    <script src="Script1.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma IT Cluster</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="photos/white_background_logo.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
+                <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <header class="banner-landing contact-banner">
+        <div class="banner-text contact-banner-text">
+            <h1>Get in Touch with Us </h1>
+        </div>
+    </header>
+
+
+    <div class="contact-page-contact-container">
+        <!--<section class="contact-page-contact-header">
+            <h1>Get in Touch with Us</h1>
+            <p>We're here to answer your queries and explore new opportunities together in the pharmaceutical sector.</p>
+        </section> -->
+
+        <section class="contact-page-reasons-to-contact">
+            <div class="contact-page-reason">
+                <h3>Become a Member</h3>
+                <p>Join our thriving community and gain access to exclusive resources and networking opportunities in the pharmaceutical industry.</p>
+            </div>
+            <div class="contact-page-reason">
+                <h3>Become a Partner</h3>
+                <p>Collaborate with us and engage in groundbreaking projects and initiatives that shape the future of healthcare.</p>
+            </div>
+            <div class="contact-page-reason">
+                <h3>Schedule a Presentation</h3>
+                <p>Learn more about our cluster or our official product integrated management system in a comprehensive presentation.</p>
+            </div>
+            <div class="contact-page-reason">
+                <h3>Meet Our Members or Partners</h3>
+                <p>Arrange a meeting with our esteemed members or partners and explore potential collaborations and insights.</p>
+            </div>
+        </section>
+
+        <!-- Decorative Line -->
+        <hr class="decorative-line">
+
+        <section class="my-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Form Section -->
+                    <div class="col-md-6">
+                        <h3 class="contact-heading">Let's Connect!</h3>
+                        <p class="contact-intro">We're excited to learn more about you and how we can work together. Share your details and we'll be in touch soon.</p>
+                        <form id="myForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" class="form-control" id="name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="surname">Surname</label>
+                                    <input type="text" name="surname" class="form-control" id="surname" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control" id="email" required pattern="[^@\t\r\n]+@[^@\t\r\n]+\.[^@\t\r\n]+">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
+                            </div>
+                            <input type="hidden" name="contact_number" id="contact_number"> <!-- Hidden field for contact_number -->
+                            <button type="submit" class="btn btn-primary my-submit-btn">Submit</button>
+                        </form>
+                        <div id="message-status" style="display: none;"></div>
+                    </div>
+
+                    <!-- New Coordinator Card -->
+                    <div class="col-md-6">
+                        <div class="card coordinator-card " data-aos="fade-up">
+                            <img src="photos/operations_coordinator.jpg" class="coordinator-card-img" alt="Operational Coordinator Photo">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Augustas Gucaga - Operational Coordinator</h5>
+                                <p class="card-text">The operational heartbeat at PharmaIT Cluster, ensuring that our day-to-day activities align perfectly with our strategic goals. </p>
+                                <a href="https://www.linkedin.com/in/augustas-gucaga-766b44254/" class="btn btn-linkedin">Connect on LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coordinator Card Section -->
+                    <div class="col-md-6">
+                        <div class="card coordinator-card" data-aos="fade-up">
+                            <img src="photos/coordinator3.png" class="" alt="Coordinator Photo">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Seržas Gucaga - Cluster Founder</h5>
+                                <p class="card-text">Seržas Gucaga is deeply passionate about revolutionizing the pharma and medical sectors with innovative solutions. With his outstanding leadership, the association has formed strong collaborations and achieved significant milestones in the industry.</p>
+                                <a href="https://www.linkedin.com/in/seržas-gucaga/" class="btn btn-linkedin">Connect on LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </section>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="photos/white_background_logo.png" alt="Association Logo" id="footer-logo" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Operational Coordinator: Augustas Gucaga</p>
+                    <p>+37065512652</p>
+                    <p>augustas.gucaga@pharmams.com</p>
+                    <p>
+                        K. Petrausko 26-214,
+                        Kaunas, Lithuania
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-rights text-center">
+            <p>© 2024 Pharma IT Cluster. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('RCiYNdt-FqB74LXIN'); // replace with your public key
+        })();
+    </script>
+
+    <script>
+        window.onload = function () {
+            document.getElementById('myForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+
+                emailjs.sendForm('service_n3j30ef', 'template_145dxvy', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        document.getElementById('message-status').style.display = 'block';
+                        document.getElementById('message-status').innerText = 'Your message has been sent successfully!';
+                        document.getElementById('message-status').style.color = 'green';
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                        document.getElementById('message-status').style.display = 'block';
+                        document.getElementById('message-status').innerText = 'An error occurred. Please try again later.';
+                        document.getElementById('message-status').style.color = 'red';
+                    });
+            });
+        }
+    </script>
+    <script src="Script1.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

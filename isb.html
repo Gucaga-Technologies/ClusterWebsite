@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaMS | Pharma IT Cluster</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="photos/white_background_logo.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
+                <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="private-members-container mt-4">
+        <!-- Header Section with Company Name and Logo -->
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="private-members-title">Inherent Simplicity Baltic</h1>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <img src="photos/logo2.png" alt="ISB Logo" class="img-fluid private-members-logo">
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Welcome to ISB</h2>
+            <p class="private-members-text">
+                ISB, established in 2005, has been a pioneering force in developing advanced technologies for inventory and assortment management. With a dedicated pharmaceutical branch since 2012, we specialize in creating sophisticated technology systems tailored to the dynamic needs of the pharmacy and wholesale industries.
+            </p>
+        </div>
+
+        <!-- Why ISB Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Why Choose ISB?</h2>
+            <ul class="private-members-text">
+                <li><strong>Innovation:</strong> Creating pioneering technology for the pharmaceutical industry.</li>
+                <li><strong>Expertise:</strong> Over 8000 pharmacies worldwide trust our effective solutions.</li>
+                <li>
+                    <strong>Impactful Solutions:</strong>
+                    <ul class="sub-list">
+                        <li><strong>Inventory:</strong> Reduce overstock by 20%, ensuring demand meets supply.</li>
+                        <li><strong>Sales:</strong> Increase sales by 15% with optimized product assortment.</li>
+                        <li><strong>Overstock:</strong> Cut waste by 10% through efficient inventory management.</li>
+                        <li><strong>Efficiency:</strong> Boost operational efficiency by 10% with streamlined processes.</li>
+                        <li><strong>Insights:</strong> Identify sales opportunities and reduce shrinkage with actionable data.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Products and Services Table -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Products and Services</h2>
+            <p class="private-members-text">(<strong>Click on a row</strong> to learn more about each service/product.)</p>
+            <table class="product-table">
+                <thead class="product-table-header">
+                    <tr>
+                        <th>Category</th>
+                        <th>Service/Product</th>
+                        <th>Description</th>
+                        <th>More</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-bs-toggle="modal" data-bs-target="#horizonModal">
+                        <td>Inventory Management</td>
+                        <td>Horizon</td>
+                        <td>Our flagship AI-driven inventory optimization system designed to predict and adapt to market demands in real-time.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#redistributionModal">
+                        <td>Inventory Management</td>
+                        <td>Redistribution</td>
+                        <td>Efficiently manage and redirect surplus inventory between outlets to minimize waste and maximize availability.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#outletModal">
+                        <td>Inventory Management</td>
+                        <td>Outlet</td>
+                        <td>Customizable point-of-sale systems that streamline checkout, manage sales, and integrate seamlessly with inventory.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#promotionsModal">
+                        <td>Inventory Management</td>
+                        <td>Promotions</td>
+                        <td>Dynamic promotional management tools that target sales efforts and tailor discounts to customer buying patterns.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#assortmentModal">
+                        <td>Assortment Planning</td>
+                        <td>Assortment</td>
+                        <td>Strategic assortment planning solutions that optimize product mix and placement for maximum sales impact.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                    </tr>
+                    <tr data-bs-toggle="modal" data-bs-target="#reportsModal">
+                        <td>Data Analysis</td>
+                        <td>Reports</td>
+                        <td>Comprehensive reporting tools providing insights into sales, inventory levels, and overall business health.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- Horizon Inventory Management Modal -->
+        <div class="modal fade product-page" id="horizonModal" tabindex="-1" role="dialog" aria-labelledby="horizonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="horizonModalLabel">Horizon Inventory Management - Advanced Adequacy in Stock Levels</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Horizon Inventory Management, founded by Gutsaga Technology, is a paradigm shift from traditional forecasting to a dynamic, AI-enhanced approach to inventory control. Utilizing the Theory of Magnetism and AI, Horizon ensures your inventory levels are perpetually optimized.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            Each day, Horizon processes your latest inventory data. Our sophisticated engines analyze stock levels for adequacy, utilizing Magnetism Theory and AI to provide immediate recommendations for replenishment, thus avoiding the pitfalls of forecast-based systems.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Real-time Inventory Management: Horizon's daily adjustments ensure optimal stock levels, contributing to at least 20% less inventory than traditional forecasting systems.</li>
+                            <li>Enhanced Automation: Reduce the hours spent on inventory management, allowing your employees to focus on other critical tasks.</li>
+                            <li>Improved Financial Outcomes: Experience better inventory turnover and return on investment, coupled with reduced lost sales.</li>
+                        </ul>
+
+                        <!-- Interesting Case Study -->
+                        <h6>Interesting Case Study:</h6>
+                        <p>
+                            A pharmaceutical chain with more than 350 pharmacies automated their ordering process using Horizon for 9 months, completely hands-off. Without any human intervention, the results were remarkable, showcasing the efficiency and effectiveness of Horizon's AI-driven inventory management.
+                        </p>
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Redistribution Management Modal -->
+        <div class="modal fade product-page" id="redistributionModal" tabindex="-1" role="dialog" aria-labelledby="redistributionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="redistributionModalLabel">Redistribution - Automated Stock Balancing</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Redistribution is our automated system designed to optimize inventory across various store locations, reducing overstock and preventing product wastage through intelligent product reallocation.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            The system automatically identifies products that are overstocked, nearing expiration, or experiencing low sales at one location and reallocates them to stores where they are in higher demand. This process includes handling store closures and department changes.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Enhanced Inventory Turnover: Improve your inventory turnover rates and financial performance.</li>
+                            <li>Reduced Waste: Minimize the need to discount or dispose of overstock and near-expiry products.</li>
+                            <li>Efficient Management: Simplify the process of managing inventory during store closures or department shifts.</li>
+                            <li>Increased Sales Opportunities: Maximize sales potential by ensuring high-demand products are available where needed.</li>
+                        </ul>
+
+                        <!-- Interesting Case Study -->
+                        <h6>Interesting Case Study:</h6>
+                        <p>
+                            After a 2-week pilot, a pharmacy chain of approximately 120 pharmacies faced a sudden change in their supplier's payment terms. Required to prepay for stock, they leveraged Redistribution for efficient stock management between pharmacies. Within just two weeks, the system automatically balanced their stock, leading to significant financial savings and enabling safe prepayment for new stock purchases.
+                        </p>
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Outlet Management Modal -->
+        <div class="modal fade product-page" id="outletModal" tabindex="-1" role="dialog" aria-labelledby="outletModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="outletModalLabel">Outlet - Advanced Inventory Clearance</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Outlet by Gutsaga Technology is a cutting-edge solution designed to automatically manage and reduce inventory levels for specific SKUs across the entire retail network, including warehouses and points of sale (POS), by a target date.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            Outlet automatically adjusts product prices based on price elasticity and risk management, and redistributes SKUs between POSs to minimize logistics costs, ensuring efficient clearance of inventory by the specified target date.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Time-Saving for Category Managers: Reduces the workload of managing sell-out products, traditionally taking up 20%-40% of their time.</li>
+                            <li>Increased Revenue: Enhances the potential to earn more by selling products more efficiently before deadlines.</li>
+                            <li>Shelf Management: Ensures timely clearance of old products to make space for new inventory.</li>
+                        </ul>
+
+                        <!-- Interesting Case Study -->
+                        <h6>Interesting Case Study:</h6>
+                        <p>
+                            A client with about 120 cosmetic stores used Outlet to manage 5-8k products in their sell-out section. The system handled price changes and redistribution automatically, requiring only one person to spend 15 minutes daily overseeing the process. Previously, 12 category managers would each spend 20-30 minutes daily managing these SKUs.
+                        </p>
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Promotions Management Modal -->
+        <div class="modal fade product-page" id="promotionsModal" tabindex="-1" role="dialog" aria-labelledby="promotionsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="promotionsModalLabel">Promotions - Advanced Sales and Stock Management</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            The Promotions technology, developed through a collaboration between GT and ISB, revolutionizes retail sales enhancement. It is specifically designed to optimize promotional activities in retail, particularly beneficial for cosmetic stores and pharmacies.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            This system utilizes advanced forecasting methods and real-time adjustments through the 'Horizon' feature during active promotions. It efficiently selects products for promotions, focusing on fast-moving items and reducing overstock.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Effective Stock Management: Reduces unwanted overstock and minimizes lost sales during promotions.</li>
+                            <li>Targeted Promotions: Identifies and promotes products that are most likely to generate sales.</li>
+                            <li>Dynamic Adjustments: Real-time changes during promotions for optimal performance.</li>
+                        </ul>
+
+                        <!-- Pricing -->
+                        <h6>Pricing:</h6>
+                        <p>
+                            Please contact us for detailed pricing information. We offer customized solutions to match your specific needs.
+                        </p>
+
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assortment Management Modal -->
+        <div class="modal fade product-page" id="assortmentModal" tabindex="-1" role="dialog" aria-labelledby="assortmentModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="assortmentModalLabel">Assortment - Strategic Product Placement and Optimization</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            The Assortment subproduct from ISB is designed to strategically manage product placements in retail. It focuses on spreading high-ranking products across Points of Sale (POS) and removing long-term unsold items, optimizing the retail space efficiently.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            Utilizing a sophisticated system, Assortment calculates rankings based on sales units, volume, and margin for each SKU across POS. It identifies missing high-ranking products in POS assortments and suggests their addition. Simultaneously, it identifies products with extended no-sale periods and recommends their removal.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Increased Sales: Ensuring high-demand products are available at the right POS.</li>
+                            <li>Improved Customer Satisfaction: Offering a more tailored product range to meet consumer demands.</li>
+                            <li>Better Inventory Management: Enhancing ITR and ROI by eliminating stagnant stock.</li>
+                        </ul>
+
+                        <!-- Pricing -->
+                        <h6>Pricing:</h6>
+                        <p>
+                            For detailed pricing information, please reach out to us. We offer solutions that cater to your unique business requirements.
+                        </p>
+
+
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reports Management Modal -->
+        <div class="modal fade product-page" id="reportsModal" tabindex="-1" role="dialog" aria-labelledby="reportsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="reportsModalLabel">Reports - In-depth Analysis and Strategic Insight</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            Developed by ISB, with the expertise of GT and PharmaMS, the Reports subproduct is an essential tool in inventory management, offering in-depth analysis for top management and specialists.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <p>
+                            Reports consist of two parts: First, focused reports aiding top management in identifying and addressing real-time issues. Second, a versatile reporting cube (CUBE), capable of generating a wide range of reports.
+                        </p>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <ul>
+                            <li>Targeted Insights: Tailored reports for top management and specialists to focus on critical areas.</li>
+                            <li>Flexibility: Ability to generate diverse reports for various needs.</li>
+                            <li>Data Efficiency: Efficient handling of large data volumes without incurring extra costs.</li>
+                        </ul>
+
+                        <!-- Pricing -->
+                        <h6>Pricing:</h6>
+                        <p>
+                            For detailed pricing information, please contact us. We offer customized solutions based on your specific business requirements.
+                        </p>
+
+                        <!-- Contact Information -->
+
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Ready to Transform Your Business Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Ready to Transform Your Business?</h2>
+            <p class="private-members-text">
+                Connect with ISB for cutting-edge inventory management tehnologies. Let's start working together with free diagnostic to distinguish your business operational health!
+            </p>
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <p class="contact-person">Contact Person: <strong>Remigijus Kozeniauskas</strong></p>
+                <p class="contact-phone">Phone: <strong>+1 (555) 123-4567</strong></p>
+                <p class="contact-email">Email: <a href="mailto:remigijus.kozeniauskas@pharmams.com">remigijus.kozeniauskas@pharmams.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="photos/white_background_logo.png" alt="Association Logo" id="footer-logo" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <h5>About</h5>
+                    <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Operational Coordinator: Augustas Gucaga</p>
+                    <p>+37065512652</p>
+                    <p>augustas.gucaga@pharmams.com</p>
+                    <p>
+                        K. Petrausko 26-214,
+                        Kaunas, Lithuania
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-rights text-center">
+            <p>© 2024 Pharma IT Cluster. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    <script src="Script1.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
