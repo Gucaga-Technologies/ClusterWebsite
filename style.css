@@ -1185,38 +1185,7 @@ cluster-solution-key-benefits {
         .contact-info .contact-email a:hover {
             text-decoration: underline; /* Adds an underline on hover for better user interaction */
         }
-/* ______________________modal carousel______________________________________________________________________ */
 
-/* General styles for the carousel images to maintain natural aspect ratio */
-.carousel-img {
-    max-width: 100%; /* Ensure images are not wider than their container */
-    height: auto; /* Maintain the natural aspect ratio */
-}
-
-/* Additional responsive adjustments */
-@media (min-width: 992px) {
-    .carousel-img {
-        max-width: 60%; /* Larger screens can accommodate larger images */
-    }
-}
-
-@media (max-width: 991px) {
-    .carousel-img {
-        max-width: 75%; /* Smaller screens will have slightly larger images relative to screen size */
-    }
-}
-
-@media (max-width: 576px) {
-    .carousel-img {
-        max-width: 100%; /* On very small screens, allow the image to fill the container */
-    }
-}
-
-/* Darken the carousel control icons */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: brightness(0.5); /* Makes the icon darker */
-}
 
 /*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
 /*________Partners__________________*/
@@ -1542,6 +1511,39 @@ cluster-solution-key-benefits {
 
 .product-page .modal-body a.btn-learn-more {
     color: white;
+}
+/* ______________________modal carousel______________________________________________________________________ */
+
+/* General styles for the carousel images to maintain natural aspect ratio */
+.carousel-img {
+    width: 100%; /* Force image to fill the width */
+    border-radius: 5px; /* Soft rounded corners on images */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Additional responsive adjustments */
+@media (min-width: 992px) {
+    .carousel-img {
+        max-width: 60%; /* Larger screens can accommodate larger images */
+    }
+}
+
+@media (max-width: 991px) {
+    .carousel-img {
+        max-width: 75%; /* Smaller screens will have slightly larger images relative to screen size */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-img {
+        max-width: 100%; /* On very small screens, allow the image to fill the container */
+    }
+}
+
+/* Darken the carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0.5); /* Makes the icon darker */
 }
 
 
