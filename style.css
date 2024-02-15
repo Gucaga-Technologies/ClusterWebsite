@@ -224,7 +224,12 @@ body {
     padding: 20px;
     text-align: center; /* Center text for a balanced look */
 }
-
+@media (max-width: 576px) { /* Adjustments for small devices like phones */
+    .home-page-icon-container {
+        flex: 0 0 100%; /* Each icon container takes full width */
+        margin-bottom: 10px; /* Add some space between wrapped items */
+    }
+}
 .home-page-about-title {
     font-size: 2.5em;
     color: #0d47a1; /* Cluster's theme color for the title */
@@ -242,6 +247,7 @@ body {
     justify-content: center; /* Center icons for a balanced look */
     align-items: center;
     margin-bottom: 20px; /* Space between icons and text */
+    flex-wrap: wrap; /* Allow items to wrap as needed on smaller screens */
 }
 
 .home-page-icon-container {
@@ -608,6 +614,40 @@ body {
     margin-top: 2rem;
 }
 
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .cluster-solution-banner {
+        height: auto; /* Adjust height to be auto to contain the content */
+        background-size: cover; /* Cover ensures the background image covers the area */
+        background-position: center center; /* Center the background image */
+    }
+
+    .cluster-solution-overlay {
+        padding: 20px; /* Reduced padding */
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center; /* Center content vertically */
+        height: 100%; /* Full height */
+    }
+
+    .cluster-solution-headline {
+        font-size: 1.4rem; /* Reduced font size */
+        line-height: 1.2; /* Adjust line height to prevent overlap */
+        margin-bottom: 0.5rem; /* Add some space between the headline and subheadline */
+    }
+
+    .cluster-solution-subheadline {
+        font-size: 1rem; /* Reduced font size */
+    }
+
+    .cluster-solution-cta-button {
+        max-width: 250px; /* Set a maximum width for the button */
+        width: auto; /* Override any previous width settings */
+        display: inline-block; /* Makes the button only as wide as its content */
+        margin: 1rem auto; /* Centers the button horizontally */
+    }
+}
 
 /* Partner Logos Section Style */
 .cluster-solution-partners {
