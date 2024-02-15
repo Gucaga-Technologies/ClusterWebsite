@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equinox | Pharma IT Cluster</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="photos/white_background_logo.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
+                <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="private-members-container mt-4">
+        <!-- Header Section with Company Name and Logo -->
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="private-members-title">OPTAS</h1>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <img src="photos/optas_logo.png" alt="OPTAS Logo" class="img-fluid private-members-logo">
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Welcome to OPTAS</h2>
+            <p class="private-members-text">
+                In pharmacy companies more than half of the people work on irregular shifts (in retail, logistics, etc.).
+                Usually, schedules are managed with non-specialized tools like Excel. A manager with 50+ employees
+                can spend up to 20+ hours per week for scheduling. Managers having to deal with such time-consuming
+                tasks can often forget to check-in with employees leaving them feeling unvalued or unheard. Modern
+                automated scheduling software can make this nightmare into a joyful adventure. OPTAS AI based
+                algorithms make complex schedules faster, more efficient and with employee availability in mind.
+                Managers are freed from scheduling burden and can dedicate more time to employees.
+            </p>
+        </div>
+
+        <!-- Why OPTAS Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Why Choose OPTAS?</h2>
+            <ul class="private-members-text">
+                <li><strong>Innovative Technology:</strong> OPTAS employs AI algorithms to create complex schedules swiftly, keeping in mind labor laws and employee availability.</li>
+                <li><strong>Expertise:</strong> With proven success in large Lithuanian companies, OPTAS ensures that scheduling is not only easy but also compliant and employee-centric.</li>
+                <li><strong>Efficient Workforce Management:</strong> Empowering managers to focus more on employees rather than administrative tasks, OPTAS significantly enhances workplace satisfaction.</li>
+            </ul>
+        </div>
+
+        <!-- Products and Services Table -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Products and Services</h2>
+            <p class="private-members-text">(<strong>Click on a row</strong> to learn more about each service/product.)</p>
+            <table class="product-table">
+                <thead class="product-table-header">
+                    <tr>
+                        <th>Category</th>
+                        <th>Service/Product</th>
+                        <th>Description</th>
+                        <th>More</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-bs-toggle="modal" data-bs-target="#optasSchedulingModal">
+                        <td>Workforce Scheduling</td>
+                        <td>AI-based Scheduling Tool</td>
+                        <td>Automate and manage efficient workforce schedules with AI-driven precision and compliance.</td>
+                        <td class="learn-more-cell"><i class="bi bi-arrow-right-circle learn-more-icon"></i></td>
+                    </tr>
+                    <!-- Additional rows for other services -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- OPTAS Automated Scheduling Modal -->
+        <div class="modal fade product-page" id="optasSchedulingModal" tabindex="-1" role="dialog" aria-labelledby="optasSchedulingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content product-page-modal-content">
+                    <div class="modal-header product-page-modal-header">
+                        <h5 class="modal-title product-page-modal-title" id="optasSchedulingModalLabel">OPTAS Automated Scheduling - AI-Driven Workforce Management</h5>
+                    </div>
+                    <div class="modal-body product-page-modal-body">
+                        <!-- Service Description -->
+                        <p>
+                            OPTAS is an AI-based automated scheduling tool that revolutionizes workforce management, ensuring effective schedule creation and management.
+                        </p>
+
+                        <!-- How It Works -->
+                        <h6>How It Works:</h6>
+                        <ul>
+                            <li>AI-powered automatic scheduling to optimize shift allocations.</li>
+                            <li>Ensures schedules comply with labor laws.</li>
+                            <li>Employee input is considered for availability and preferred work times.</li>
+                            <li>Automated notifications for new schedules and related updates.</li>
+                            <li>Tracks actual working hours and provides analytical data.</li>
+                            <li>Seamless integration with payroll and access control systems.</li>
+                        </ul>
+
+                        <!-- Benefits -->
+                        <h6>Benefits:</h6>
+                        <p>
+                            OPTAS system empowers managers to create complex and Labour Law compliant employee schedules
+                            easy and quickly. OPTAS helps to save not only money and time, but it also makes employees more
+                            satisfied with their workplace.</p>
+                        <p>
+                        OPTAS is a good match for pharmacy companies, especially for retail and warehouse personnel
+                        management.
+                        </p>
+
+                        <!-- Proof -->
+                        <h6>Case Study:</h6>
+                        <p>
+                            It’s a proven solution already working in large Lithuanian companies with 2000+ employees. Solutions
+                            like OPTAS will help pharmacy companies to transition to AI based modern tools in their workforce
+                            management. Considering that nowadays experienced personnel is a scarce resource, efficient
+                            workforce management in organizations is just a must.
+                        </p>
+                    </div>
+                    <div class="modal-footer product-page-modal-footer">
+                        <button type="button" class="btn btn-close-blue" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ready to Transform Your Business Section -->
+        <div class="mt-4 private-members-section">
+            <h2 class="private-members-heading">Ready to Transform Your Business?</h2>
+            <p class="private-members-text">
+                Embrace the future of workforce management with <a href="http://www.optas.co" target="_blank">www.optas.co </a>. Experience seamless, AI-driven scheduling and unlock the potential of your human resources. Connect with us to learn more.
+            </p>
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <p class="contact-person">Contact Person: <strong>[Name]</strong></p>
+                <p class="contact-phone">Phone: <strong>[Phone Number]</strong></p>
+                <p class="contact-email">Email: <a href="mailto:[Email]">[Email]</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="photos/white_background_logo.png" alt="Association Logo" id="footer-logo" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <h5>About</h5>
+                        <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <p>Operational Coordinator: Augustas Gucaga</p>
+                        <p>+37065512652</p>
+                        <p>augustas.gucaga@pharmams.com</p>
+                        <p>
+                            K. Petrausko 26-214,
+                            Kaunas, Lithuania
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-rights text-center">
+                <p>© 2024 Pharma IT Cluster. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+        <script src="Script1.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
