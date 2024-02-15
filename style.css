@@ -1455,6 +1455,43 @@ cluster-solution-key-benefits {
 .learn-more-cell {
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .product-page-content {
+        padding: 10px;
+    }
+
+    .product-table {
+        font-size: 12px; /* Further reduce the font size */
+        border: 0; /* Optional: remove the border to save space */
+    }
+
+        .product-table th,
+        .product-table td {
+            padding: 20px 10px; /* Increase padding top and bottom for taller rows, left and right reduced */
+            border: 1px solid #ccc; /* Lighten the border color to make it less prominent */
+        }
+
+        /* Allow word break to avoid horizontal scroll as much as possible */
+        .product-table .product-table-description {
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .product-table .product-category,
+        .product-table .product-name,
+        .product-table .company-name {
+            width: auto; /* Allow the width to adjust naturally */
+        }
+
+    .learn-more-cell {
+        padding: 20px; /* Increase the padding for the 'More' cell to align with other cells */
+    }
+}
+
+
+
+
 /*________Modals__________________*/
 /* Modal styles for the product page */
 
