@@ -1189,14 +1189,14 @@ cluster-solution-key-benefits {
 
 /* General styles for the carousel images to maintain natural aspect ratio */
 .carousel-img {
-    max-width: 70%; /* Ensure images are not wider than their container */
+    max-width: 100%; /* Ensure images are not wider than their container */
     height: auto; /* Maintain the natural aspect ratio */
 }
 
 /* Additional responsive adjustments */
 @media (min-width: 992px) {
     .carousel-img {
-        max-width: 50%; /* Larger screens can accommodate larger images */
+        max-width: 60%; /* Larger screens can accommodate larger images */
     }
 }
 
@@ -1211,6 +1211,13 @@ cluster-solution-key-benefits {
         max-width: 100%; /* On very small screens, allow the image to fill the container */
     }
 }
+
+/* Darken the carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0.5); /* Makes the icon darker */
+}
+
 /*________________________________________________________________________________________________________________________________________________________________________________________________________________*/
 /*________Partners__________________*/
 /*________Only__________________*/
