@@ -1535,6 +1535,11 @@ cluster-solution-key-benefits {
 }
 
 @media (max-width: 576px) {
+    .product-page-modal-content {
+        width: 97%; /* Adjusted width for mobile devices */
+        margin: 5% auto; /* Centers the modal with a top margin */
+        padding: 20px; /* Keeps the existing padding */
+    }
     .carousel-img {
         max-width: 100%; /* On very small screens, allow the image to fill the container */
     }
