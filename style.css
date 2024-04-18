@@ -1418,14 +1418,15 @@ cluster-solution-key-benefits {
 .product-table .product-category,
 .product-table .product-name,
 .product-table .company-name {
-    width: 12%; /* Example width, adjust accordingly */
+    width: 10%; /* Example width, adjust accordingly */
 }
 
 .product-table .product-table-description {
-    width: 60%; /* Adjust the width as needed */
-    white-space: nowrap; /* Prevents the text from wrapping */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis to overflow */
+    width: 67%; /* Adjust the width as needed */
+    white-space: normal; /* Prevents the text from wrapping */
+    word-wrap: break-word; /* Ensures words do not break improperly */
+    overflow: visible; /* Ensures text is visible and not hidden */
+    text-overflow: clip; /* Prevents text from being clipped */
 }
 
 /* Striped rows for better readability */
