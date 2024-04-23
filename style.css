@@ -1999,7 +1999,7 @@ cluster-solution-key-benefits {
     justify-content: center;
     gap: 10px;
     padding-top: 1rem;
-    flex-direction: column; /* Stack images vertically */
+    flex-direction: row; /* Change to row to align images horizontally */
     align-items: center; /* Center-align the thumbnail */
 }
 
@@ -2028,7 +2028,12 @@ cluster-solution-key-benefits {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 80vh;
+    width: 100%; /* Ensure this takes the full width */
+    max-width: 1200px;
+    margin: auto;
+    padding: 0; /* Remove padding here */
 }
 
 .event-modal {
@@ -2055,30 +2060,46 @@ cluster-solution-key-benefits {
     cursor: pointer;
 }
 
-.event-modal-content {
-    position: relative;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1200px;
-}
 
 .mySlides {
-    max-width: 100%;
-    max-height: 80vh; /* Adjust as needed */
-    object-fit: contain;
+    display: none; /* This will hide all slides initially */
+    padding: 0 35px; /* Apply padding here to center the slides if needed */
 }
+
+    .mySlides img {
+        max-width: 100%;
+        max-height: 80vh;
+        object-fit: contain;
+        display: block; /* Ensure image takes up the whole slide */
+        margin: auto; /* Center the image */
+    }
 
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: auto;
     padding: 16px;
-    margin-top: -50px;
     color: white;
     font-weight: bold;
     font-size: 20px;
+    z-index: 10; /* ensure it's above other elements */
+    background-color: rgba(255, 255, 255, 0.5); /* Light background with opacity */
+    z-index: 1001; /* Should be higher than the image but within the modal's stacking context */
+    border-radius: 50%; /* Makes the buttons circular */
+    color: #333; /* Button arrow color */
+}
+}
+
+.prev {
+
+    left: -500px; /* Adjust to push the button outside the image area */
+
+}
+
+.next {
+    right: -70px; /* Adjust to push the button outside the image area */
 }
 
 
