@@ -1,43 +1,57 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharma IT Cluster</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact us | Pharma IT Cluster</title>
+    <meta name="description" content="Get in touch with Pharma IT Cluster to become a member or partner, book a presentation or meet our members.">
+    <meta name="theme-color" content="#0A1A2F">
+    <meta property="og:title" content="Contact us | Pharma IT Cluster">
+    <meta property="og:description" content="Get in touch with Pharma IT Cluster to become a member or partner, book a presentation or meet our members.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="photos/white_background_logo.png">
+    <link rel="icon" type="image/x-icon" href="photos/Pharma_logo_favicon.ico">
 
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-latin-700-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" crossorigin>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">
-            <img src="photos/white_background_logo.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
-                <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
-                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
-                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="header-navbar-container site-header" id="siteHeader">
+        <nav class="navbar navbar-expand-xl site-nav" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand site-brand" href="index.html">
+                    <img src="photos/logo_color.png" alt="Pharma IT Cluster" class="site-logo" width="546" height="126">
+                </a>
+                <button class="navbar-toggler site-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span class="site-toggler-bar"></span>
+                    <span class="site-toggler-bar"></span>
+                    <span class="site-toggler-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="primaryNav">
+                    <ul class="navbar-nav ms-auto site-menu">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
+                    <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
+                    <li class="nav-item nav-item-cta"><a class="nav-link active" href="contact.html" aria-current="page">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-
-
-    <header class="banner-landing contact-banner">
+    <main id="main">
+<header class="banner-landing contact-banner">
         <div class="banner-text contact-banner-text">
             <h1>Get in Touch with Us </h1>
         </div>
@@ -76,7 +90,7 @@
             <div class="container">
                 <div class="row">
                     <!-- Contact Form Section -->
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <h3 class="contact-heading">Let's Connect!</h3>
                         <p class="contact-intro">We're excited to learn more about you and how we can work together. Share your details and we'll be in touch soon.</p>
                         <form id="myForm" class="contact-form">
@@ -104,9 +118,9 @@
                         <div id="message-status" style="display: none;"></div>
                     </div>
 
-                    <!-- New Coordinator Card -->
-                    <div class="col-md-6">
-                        <div class="card coordinator-card " data-aos="fade-up">
+                    <!-- Coordinator cards, stacked beside the form -->
+                    <div class="col-lg-6 coordinator-column">
+                        <div class="card coordinator-card ">
                             <img src="photos/operations_coordinator.jpg" class="coordinator-card-img" alt="Operational Coordinator Photo">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Augustas Gucaga - Operational Coordinator</h5>
@@ -114,10 +128,8 @@
                                 <a href="https://www.linkedin.com/in/augustas-gucaga-766b44254/" class="btn btn-linkedin">Connect on LinkedIn</a>
                             </div>
                         </div>
-                    </div>
-                    <!-- Coordinator Card Section -->
-                    <div class="col-md-6">
-                        <div class="card coordinator-card" data-aos="fade-up">
+                        <!-- Coordinator Card Section -->
+                        <div class="card coordinator-card">
                             <img src="photos/coordinator3.png" class="" alt="Coordinator Photo">
                             <div class="card-body text-center">
                                 <h5 class="card-title">Seržas Gucaga - Cluster Founder</h5>
@@ -126,44 +138,57 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
+            </div>
         </section>
     </div>
 
 
     <!-- footer -->
-    <footer class="footer">
+        </main>
+
+    <footer class="footer site-footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <img src="photos/white_background_logo.png" alt="Association Logo" id="footer-logo" class="img-fluid">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="photos/logo_white.png" alt="Pharma IT Cluster" class="footer-logo" id="footer-logo" width="546" height="126">
+                    <p class="footer-tagline">An innovation cluster uniting technology, logistics and consultancy companies across pharmacy retail and the pharmaceutical supply chain.</p>
                 </div>
-                <div class="col-md-4">
-                    <h5>About</h5>
-                    <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Operational Coordinator: Augustas Gucaga</p>
-                    <p>+37065512652 (WhatsApp)</p>
-                    <p>augustas.gucaga@pharmams.com</p>
-                    <p>
-                        K. Petrausko 26-214,
-                        Kaunas, Lithuania
-                    </p>
+                <nav class="footer-col" aria-label="Footer — explore">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="clusterSolution.html">Cluster Solution</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About us</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-col" aria-label="Footer — network">
+                    <h5>Network</h5>
+                    <ul>
+                        <li><a href="members.html">Members</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="euproject.html">EU project</a></li>
+                        <li><a href="contact.html">Join the cluster</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-col footer-contact">
+                    <h5>Contact</h5>
+                    <p class="footer-role">Operational coordinator</p>
+                    <p class="footer-name">Augustas Gucaga</p>
+                    <p><a href="mailto:augustas@gutsaga.tech">augustas@gutsaga.tech</a></p>
+                    <p><a href="tel:+37065512652">+370 655 12652</a> (WhatsApp)</p>
+                    <address>K. Petrausko 26-214<br>Kaunas, Lithuania</address>
                 </div>
             </div>
-        </div>
-        <hr>
-        <div class="footer-rights text-center">
-            <p>© 2024 Pharma IT Cluster. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> Pharma IT Cluster. All rights reserved.</p>
+                <p>Co-funded by the European Regional Development Fund</p>
+            </div>
         </div>
     </footer>
 
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -192,6 +217,8 @@
             });
         }
     </script>
-    <script src="Script1.js"></script> <!-- Link to your JavaScript file -->
+<!-- Link to your JavaScript file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Script1.js"></script>
 </body>
 </html>

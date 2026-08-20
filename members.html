@@ -1,39 +1,57 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharma IT Cluster</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Members | Pharma IT Cluster</title>
+    <meta name="description" content="Meet the member companies of Pharma IT Cluster, each contributing specialised technology and expertise to pharmacy retail.">
+    <meta name="theme-color" content="#0A1A2F">
+    <meta property="og:title" content="Members | Pharma IT Cluster">
+    <meta property="og:description" content="Meet the member companies of Pharma IT Cluster, each contributing specialised technology and expertise to pharmacy retail.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="photos/white_background_logo.png">
+    <link rel="icon" type="image/x-icon" href="photos/Pharma_logo_favicon.ico">
 
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-latin-700-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" crossorigin>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">
-            <img src="photos/white_background_logo.png" alt="Logo with title" class="img-fluid" id="navbarLogo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
-                <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
-                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
-                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="header-navbar-container site-header" id="siteHeader">
+        <nav class="navbar navbar-expand-xl site-nav" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand site-brand" href="index.html">
+                    <img src="photos/logo_color.png" alt="Pharma IT Cluster" class="site-logo" width="546" height="126">
+                </a>
+                <button class="navbar-toggler site-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span class="site-toggler-bar"></span>
+                    <span class="site-toggler-bar"></span>
+                    <span class="site-toggler-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="primaryNav">
+                    <ul class="navbar-nav ms-auto site-menu">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clusterSolution.html">Cluster Solution</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="members.html" aria-current="page">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="euproject.html">EU Project</a></li>
+                    <li class="nav-item nav-item-cta"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-    <header class="banner-landing members-banner">
+    <main id="main">
+<header class="banner-landing members-banner">
         <div class="banner-text members-banner-text">
             <h1>Members</h1>
             <p>Expanding Horizons Together</p>
@@ -60,15 +78,13 @@
                         </ul>
                         <p>Joining the PharmaIT cluster signifies a commitment to innovation and leadership in pharmacy technology. Our members are not just participants; they are essential contributors to a unified solution that comprehensively addresses the pharmaceutical sector's diverse needs.</p>
                         <div class="become-member-cta">
-                            <a href="#become-member" class="btn btn-primary">Become a Member</a>
+                            <a href="contact.html" class="btn btn-primary">Become a Member</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 
 
     <div class="member-services-title">
@@ -78,7 +94,6 @@
 
     <!-- Decorative Line -->
     <hr class="decorative-line">
-
 
 
     <!-- Member Cards Section -->
@@ -99,7 +114,7 @@
                 <div class="col-md-4">
                     <a href="GTC.html" class="member-page-card">
                         <div class="member-page-logo-container">
-                            <img src="photos/gtcLogo_bigger.png" alt="GTC Logo" class="member-page-card-logo">
+                            <img src="photos/gtclogo_bigger.png" alt="GTC Logo" class="member-page-card-logo">
                         </div>
                         <h5 class="member-page-card-title">Gutsaga Technologies</h5>
                         <p class="member-page-card-text">Optimize inventory and assortment, enhance sales and ROI with GTC Cloud Technologies.</p>
@@ -152,85 +167,56 @@
     </section>
 
 
-
-
-
     <!-- footer -->
-    <footer class="footer">
+        </main>
+
+    <footer class="footer site-footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <img src="photos/white_background_logo.png" alt="Association Logo" id="footer-logo" class="img-fluid">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="photos/logo_white.png" alt="Pharma IT Cluster" class="footer-logo" id="footer-logo" width="546" height="126">
+                    <p class="footer-tagline">An innovation cluster uniting technology, logistics and consultancy companies across pharmacy retail and the pharmaceutical supply chain.</p>
                 </div>
-                <div class="col-md-4">
-                    <h5>About</h5>
-                    <p>We're an innovative association dedicated to pioneering the pharma and medical sectors. Our members collaborate to develop and promote advanced solutions for improved efficiency and global impact.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Operational Coordinator: Augustas Gucaga</p>
-                    <p>+37065512652 (WhatsApp)</p>
-                    <p>augustas.gucaga@pharmams.com</p>
-                    <p>
-                        K. Petrausko 26-214,
-                        Kaunas, Lithuania
-                    </p>
+                <nav class="footer-col" aria-label="Footer — explore">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="clusterSolution.html">Cluster Solution</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About us</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-col" aria-label="Footer — network">
+                    <h5>Network</h5>
+                    <ul>
+                        <li><a href="members.html">Members</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="euproject.html">EU project</a></li>
+                        <li><a href="contact.html">Join the cluster</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-col footer-contact">
+                    <h5>Contact</h5>
+                    <p class="footer-role">Operational coordinator</p>
+                    <p class="footer-name">Augustas Gucaga</p>
+                    <p><a href="mailto:augustas@gutsaga.tech">augustas@gutsaga.tech</a></p>
+                    <p><a href="tel:+37065512652">+370 655 12652</a> (WhatsApp)</p>
+                    <address>K. Petrausko 26-214<br>Kaunas, Lithuania</address>
                 </div>
             </div>
-        </div>
-        <hr>
-        <div class="footer-rights text-center">
-            <p>© 2024 Pharma IT Cluster. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> Pharma IT Cluster. All rights reserved.</p>
+                <p>Co-funded by the European Regional Development Fund</p>
+            </div>
         </div>
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="Script1.js"></script> <!-- Link to your JavaScript file -->
+<!-- Link to your JavaScript file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Script1.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- Modal for Pharma MS -->
@@ -239,7 +225,7 @@
         <div class="modal-content member-page-modal-content">
             <div class="modal-header member-page-modal-header">
                 <h5 class="modal-title member-page-modal-title" id="memberPagePharmaMSModalLabel">Pharma Management Solutions (PharmaMS) - Your Partner in Pharmacy Excellence</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body member-page-modal-body">
                 <h6>About PharmaMS:</h6>
@@ -309,7 +295,7 @@
         <div class="modal-content member-page-modal-content">
             <div class="modal-header member-page-modal-header">
                 <h5 class="modal-title member-page-modal-title" id="memberPageISBModalLabel">ISB - Optimize Inventory and Assortment, Enhance Sales and ROI</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body member-page-modal-body">
                 <h6>About ISB</h6>

@@ -1,140 +1,133 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Get the current URL or path to identify the active page
-    let path = window.location.pathname;
-    // Extract the page name
-    path = path.substring(path.lastIndexOf('/') + 1);
+/* =============================================================================
+   Pharma IT Cluster — site behaviour
+   Small and dependency-free. Bootstrap handles collapse / modal / carousel.
+   ============================================================================= */
+(function () {
+    'use strict';
 
-    // Set the 'active' class on the corresponding nav link
-    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-        // Check if the href of the link matches the current path
-        if (link.getAttribute('href') === path) {
-            link.classList.add('active');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* --- Header condenses once the page is scrolled ------------------------ */
+    function stickyHeader() {
+        var header = document.getElementById('siteHeader');
+        if (!header) return;
+        var ticking = false;
+
+        function update() {
+            header.classList.toggle('is-stuck', window.scrollY > 12);
+            ticking = false;
         }
-    });
-
-});
-
-
-document.querySelectorAll('.feature-icon i').forEach(item => {
-    item.addEventListener('click', () => {
-        // Trigger any action, like opening a modal with more info
-        alert('More information about ' + item.nextElementSibling.textContent);
-    });
-});
-
-
-// Function to open a modal
-function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "block";
-}
-
-// Function to close a modal
-function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "none";
-}
-
-// Close modal when clicking outside of it
-window.onclick = function (event) {
-    if (event.target.className === 'modal') {
-        event.target.style.display = "none";
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(update);
+                ticking = true;
+            }
+        }, { passive: true });
+        update();
     }
-}
 
+    /* --- Mark the active nav item (fallback for the markup-rendered state) -- */
+    function activeNav() {
+        var links = document.querySelectorAll('.site-nav .nav-link');
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].classList.contains('active')) return;
+        }
+        var path = window.location.pathname.split('/').pop() || 'index.html';
+        for (var j = 0; j < links.length; j++) {
+            if (links[j].getAttribute('href') === path) {
+                links[j].classList.add('active');
+                links[j].setAttribute('aria-current', 'page');
+            }
+        }
+    }
 
-// Select all feature icons
-const featureIcons = document.querySelectorAll('.feature-icon');
+    /* --- Reveal content as it enters the viewport --------------------------- */
+    var REVEAL_TARGETS = [
+        '.home-page-about-container > *',
+        '.home-page-synergy-system .container > *',
+        '.home-page-target-market .container > *',
+        '.home-page-featured-solutions .text-center > *',
+        '.home-page-section',
+        '.member-page-card',
+        '.contact-page-reason',
+        '.cluster-solution-feature-item',
+        '.key-benefits-list li',
+        '.event-card',
+        '.target-market-icon-container',
+        '.home-page-icon-container',
+        '.private-members-section',
+        '.about-us-container > *',
+        '.coordinator-card'
+    ].join(',');
 
-// Function to enlarge icons
-function enlargeIcon() {
-    this.style.transform = 'scale(1.5)'; // Enlarge icon more significantly
-}
+    function revealOnScroll() {
+        if (reduceMotion || !('IntersectionObserver' in window)) return;
 
-// Function to reset icon size
-function resetIconSize() {
-    this.style.transform = 'scale(1)'; // Reset icon size
-}
-
-// Add mouseover and mouseout event to each icon
-featureIcons.forEach(icon => {
-    icon.addEventListener('mouseover', enlargeIcon);
-    icon.addEventListener('mouseout', resetIconSize);
-});
-
-
-document.querySelectorAll('.member-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.boxShadow = '0px 15px 30px 0px rgba(0, 0, 0, 0.2)';
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.boxShadow = '0px 8px 16px 0px rgba(0, 0, 0, 0.1)';
-    });
-});
-
-
-const discoverButton = document.querySelector('.btn-discover');
-if (discoverButton) {
-    discoverButton.addEventListener('click', () => {
-        window.location.href = '/products-page'; // Adjust the URL to your products page
-    });
-}
-//_______________home page__________________________________________________________________________________________________________________
-// Example of using JavaScript to add animations or additional interactivity
-document.querySelectorAll('.home-page-featured-solutions .card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        // Animation or interaction logic on mouse enter
-    });
-    card.addEventListener('mouseleave', () => {
-        // Animation or interaction logic on mouse leave
-    });
-});
-//_______________Members page__________________________________________________________________________________________________________________
-
-// Assuming you're using jQuery for Bootstrap modal triggers
-
-//$('.member-page-card').click(function () {
-//    var targetModal = $(this).data('target');
-//    $(targetModal).modal('show');
-//});
-// Tooltips for benefits
-document.addEventListener('DOMContentLoaded', () => {
-    const benefitItems = document.querySelectorAll('.key-benefits-list li');
-
-    benefitItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            // Show tooltip
-            const tooltip = item.querySelector('.benefit-description');
-            tooltip.style.display = 'block';
+        var all = document.querySelectorAll(REVEAL_TARGETS);
+        var nodes = Array.prototype.filter.call(all, function (n) {
+            /* carousel slides are display:none until active, so they would
+               never intersect and would stay invisible forever */
+            return !n.closest('.carousel-item');
         });
+        if (!nodes.length) return;
 
-        item.addEventListener('mouseleave', () => {
-            // Hide tooltip
-            const tooltip = item.querySelector('.benefit-description');
-            tooltip.style.display = 'none';
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+        nodes.forEach(function (node, i) {
+            node.classList.add('reveal');
+            /* stagger siblings so groups cascade instead of popping in together */
+            node.style.transitionDelay = Math.min(i % 6, 5) * 60 + 'ms';
+            observer.observe(node);
         });
-    });
-});
+    }
 
+    /* --- Copyright year stays current -------------------------------------- */
+    function currentYear() {
+        var slots = document.querySelectorAll('[data-current-year]');
+        for (var i = 0; i < slots.length; i++) {
+            slots[i].textContent = new Date().getFullYear();
+        }
+    }
 
-//_______________Product page__________________________________________________________________________________________________________________
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Listener for opening modals
-    document.querySelectorAll('tr[data-bs-toggle="modal"]').forEach(tr => {
-        tr.addEventListener('click', function () {
-            var targetModalId = this.getAttribute('data-bs-target');
-            var targetModal = new bootstrap.Modal(document.querySelector(targetModalId), {});
-            targetModal.show();
+    /* --- Clickable table rows should also work for keyboard users ----------- */
+    function tableRowKeyboard() {
+        var rows = document.querySelectorAll('.product-table tbody tr[data-bs-toggle="modal"]');
+        Array.prototype.forEach.call(rows, function (row) {
+            row.setAttribute('tabindex', '0');
+            row.setAttribute('role', 'button');
+            row.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    row.click();
+                }
+            });
         });
-    });
+    }
 
-    // Listener for closing modals
-    document.querySelectorAll('.btn-close-blue').forEach(button => {
-        button.addEventListener('click', function () {
-            var modal = bootstrap.Modal.getInstance(this.closest('.modal'));
-            modal.hide();
+    /* --- Escape closes the event image lightboxes --------------------------- */
+    function escapeClosesLightbox() {
+        document.addEventListener('keydown', function (e) {
+            if (e.key !== 'Escape') return;
+            var boxes = document.querySelectorAll('.event-modal');
+            Array.prototype.forEach.call(boxes, function (m) {
+                if (m.style.display === 'block') m.style.display = 'none';
+            });
         });
-    });
-});
+    }
 
+    document.addEventListener('DOMContentLoaded', function () {
+        stickyHeader();
+        activeNav();
+        revealOnScroll();
+        currentYear();
+        tableRowKeyboard();
+        escapeClosesLightbox();
+    });
+})();
